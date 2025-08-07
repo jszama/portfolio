@@ -5,55 +5,55 @@ import { WEBPACK_RESOURCE_QUERIES } from "next/dist/lib/constants.js";
 import type { Configuration } from "webpack";
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true,
-  compress: true,
-  experimental: {
-    optimizeCss: true,
-  },
-  images: {
-    disableStaticImages: false,
-    qualities: [50, 60, 80, 90],
-    deviceSizes: [640, 750, 828, 1080, 1200],
-    imageSizes: [16, 32, 48, 64, 96],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.jsdelivr.net",
-        port: "",
-        pathname: "**",
-      }
-    ],
-  },
-  turbopack: {
-    rules: {
-      '*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js',
-      },
-    },
-  },
-  webpack(config: Configuration, { dev: isDev, isServer }) {
-    if (isDev && config.output) {
-      config.output.devtoolModuleFilenameTemplate = (info) =>
-        info.resourcePath.replace(/\\/g, "/");
-    }
+	reactStrictMode: true,
+	compress: true,
+	experimental: {
+		optimizeCss: true,
+	},
+	images: {
+		disableStaticImages: false,
+		qualities: [50, 60, 80, 90],
+		deviceSizes: [640, 750, 828, 1080, 1200],
+		imageSizes: [16, 32, 48, 64, 96],
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "cdn.jsdelivr.net",
+				port: "",
+				pathname: "**",
+			},
+		],
+	},
+	turbopack: {
+		rules: {
+			"*.svg": {
+				loaders: ["@svgr/webpack"],
+				as: "*.js",
+			},
+		},
+	},
+	webpack(config: Configuration, { dev: isDev, isServer }) {
+		if (isDev && config.output) {
+			config.output.devtoolModuleFilenameTemplate = (info) =>
+				info.resourcePath.replace(/\\/g, "/");
+		}
 
-    config.module?.rules?.push({
-      test: nextImageLoaderRegex,
-      loader: "next/dist/shared/lib/image-loader",
-      issuer: { not: regexLikeCss },
-      dependency: { not: ["url"] },
-      resourceQuery: {
-        not: Object.values(WEBPACK_RESOURCE_QUERIES).map((query) => new RegExp(query)),
-      },
-      options: {
-        isDev,
-        isServer,
-      },
-    });
+		config.module?.rules?.push({
+			test: nextImageLoaderRegex,
+			loader: "next/dist/shared/lib/image-loader",
+			issuer: { not: regexLikeCss },
+			dependency: { not: ["url"] },
+			resourceQuery: {
+				not: Object.values(WEBPACK_RESOURCE_QUERIES).map((query) => new RegExp(query)),
+			},
+			options: {
+				isDev,
+				isServer,
+			},
+		});
 
-    return config;
-  },
+		return config;
+	},
 };
 
 export default nextConfig;
