@@ -1,4 +1,5 @@
 import Image, { type StaticImageData } from "next/image";
+import { memo } from "react";
 
 export interface Testimonial {
 	name: string;
@@ -9,7 +10,7 @@ export interface Testimonial {
 	link: string;
 }
 
-export default function TestimonialCard(props: { testimonial: Testimonial }) {
+const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Testimonial }) {
 	return (
 		<article className="flex flex-row min-w-[70dvw] min-h-[20dvh] max-h-[20dvh] sm:min-h-[32dvh] sm:max-h-[32dvh] bg-[var(--muted-background)]">
 			<div className="flex justify-center items-center p-4 flex-shrink-0">
@@ -40,4 +41,6 @@ export default function TestimonialCard(props: { testimonial: Testimonial }) {
 			</div>
 		</article>
 	);
-}
+});
+
+export { TestimonialCard };

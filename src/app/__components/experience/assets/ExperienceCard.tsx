@@ -1,11 +1,11 @@
 "use client";
 import { Button } from "@headlessui/react";
 import Image from "next/image";
-import Modal from "../../Modal";
+import { memo, useCallback, useState } from "react";
+import { Modal } from "../../Modal";
 import { type Experience } from "./experiences";
-import { useState } from "react";
 
-export default function ExperienceCard({
+const ExperienceCard = memo(function ExperienceCard({
 	company,
 	company_icon,
 	position,
@@ -18,9 +18,9 @@ export default function ExperienceCard({
 	onToggle,
 }: Experience & { isExpanded: boolean; onToggle: () => void }) {
 	const [isOpen, setIsOpen] = useState(false);
-	const toggleModal = () => {
-		setIsOpen(!isOpen);
-	};
+	const toggleModal = useCallback(() => {
+		setIsOpen((prev) => !prev);
+	}, []);
 
 	return (
 		<>
@@ -112,4 +112,6 @@ export default function ExperienceCard({
 			)}
 		</>
 	);
-}
+});
+
+export { ExperienceCard };

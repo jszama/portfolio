@@ -1,18 +1,18 @@
 "use client";
 import Image from "next/image";
-import React from "react";
-import Modal from "../../Modal";
+import { memo, useCallback, useState } from "react";
+import { Modal } from "../../Modal";
 import { type ProjectType } from "./ProjectTypes";
 
 type PropType = {
 	project: ProjectType;
 };
 
-export default function ProjectCard(props: PropType) {
-	const [isOpen, setIsOpen] = React.useState(false);
-	const toggleModal = () => {
-		setIsOpen(!isOpen);
-	};
+const ProjectCard = memo(function ProjectCard(props: PropType) {
+	const [isOpen, setIsOpen] = useState(false);
+	const toggleModal = useCallback(() => {
+		setIsOpen((prev) => !prev);
+	}, []);
 
 	return (
 		<>
@@ -65,4 +65,6 @@ export default function ProjectCard(props: PropType) {
 			</Modal>
 		</>
 	);
-}
+});
+
+export { ProjectCard };
