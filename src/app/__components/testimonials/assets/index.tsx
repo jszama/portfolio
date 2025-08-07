@@ -1,4 +1,4 @@
-import { Testimonial } from "./TestimonialCard";
+import { type Testimonial } from "./TestimonialCard";
 
 export const testimonials = [
 	{

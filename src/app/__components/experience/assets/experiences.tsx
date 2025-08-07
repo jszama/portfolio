@@ -1,5 +1,5 @@
-import { StaticImageData } from "next/image";
-import { ReactNode } from "react";
+import { type StaticImageData } from "next/image";
+import { type ReactNode } from "react";
 import { NextJsIcon, PythonIcon, ReactIcon, TypescriptIcon } from "../../TechStackIcons";
 import { OutlierLogo, Poland20Logo, PropecoLogo, Subsea7Logo } from "./index";
 

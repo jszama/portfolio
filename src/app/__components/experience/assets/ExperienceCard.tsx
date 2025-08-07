@@ -1,9 +1,9 @@
 "use client";
-import Image from "next/image";
-import React from "react";
-import { Experience } from "./experiences";
 import { Button } from "@headlessui/react";
+import Image from "next/image";
 import Modal from "../../Modal";
+import { type Experience } from "./experiences";
+import { useState } from "react";
 
 export default function ExperienceCard({
 	company,
@@ -17,7 +17,7 @@ export default function ExperienceCard({
 	isExpanded,
 	onToggle,
 }: Experience & { isExpanded: boolean; onToggle: () => void }) {
-	const [isOpen, setIsOpen] = React.useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 	const toggleModal = () => {
 		setIsOpen(!isOpen);
 	};

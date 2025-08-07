@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
-import { testimonials } from "./assets";
 import type { EmblaOptionsType, EmblaPluginType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
+import { type ReactNode } from "react";
+import { testimonials } from "./assets";
 import TestimonialCard from "./assets/TestimonialCard";
 
 export default function Testimonials() {
