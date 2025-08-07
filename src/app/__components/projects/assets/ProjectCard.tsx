@@ -1,8 +1,8 @@
 "use client";
-import React from "react";
 import Image from "next/image";
+import React from "react";
 import Modal from "../../Modal";
-import { ProjectType } from "./ProjectTypes";
+import { type ProjectType } from "./ProjectTypes";
 
 type PropType = {
 	project: ProjectType;
@@ -23,10 +23,10 @@ export default function ProjectCard(props: PropType) {
 				>
 					<Image
 						src={props.project.image}
-						width={256}
-						height={256}
+						width={384}
+						height={384}
 						alt="Project Image"
-						quality={50}
+						quality={85}
 						className="w-full h-full z-0 transition-all duration-200 hover:scale-110 will-change-transform"
 						placeholder="blur"
 						loading="eager"
