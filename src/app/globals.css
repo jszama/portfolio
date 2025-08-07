@@ -1,59 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  /* Background colors */
-  --primary-dark-background: #212121;
-  --secondary-dark-background: #2C2C2C;
-  --muted-background: #333;
+	/* Background colors */
+	--primary-dark-background: #212121;
+	--secondary-dark-background: #2c2c2c;
+	--muted-background: #333;
 
-  /* Text colors */
-  --primary-text: #E0E0E0;
-  --secondary-text: #B0B0B0;
-  --accent-text: #8A8A8A;
-  --heading-text: #FFFFFF;
+	/* Text colors */
+	--primary-text: #e0e0e0;
+	--secondary-text: #b0b0b0;
+	--accent-text: #8a8a8a;
+	--heading-text: #ffffff;
 
-  /* Magenta accents */
-  --primary-magenta: #D500F9;
-  --hover-magenta: #AB47BC;
-  --dark-magenta: #AA00FF;
+	/* Magenta accents */
+	--primary-magenta: #d500f9;
+	--hover-magenta: #ab47bc;
+	--dark-magenta: #aa00ff;
 
-  /* Other colors */
-  --success-color: #28A745;
-  --error-color: #DC3545;
-  --warning-color: #FFC107;
+	/* Other colors */
+	--success-color: #28a745;
+	--error-color: #dc3545;
+	--warning-color: #ffc107;
 
-  /* Borders and dividers */
-  --primary-border: #333333;
-  --divider-color: #444444;
+	/* Borders and dividers */
+	--primary-border: #333333;
+	--divider-color: #444444;
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-  overflow: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+	scroll-behavior: smooth;
+	scroll-padding-top: 100px;
+	overflow: auto;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
 }
 
-  html::-webkit-scrollbar {
-    display: none;
+html::-webkit-scrollbar {
+	display: none;
 }
 
 body {
-  background-color: var(--primary-dark-background);
-  color: var(--primary-text);
-  overflow-y: auto; 
+	background-color: var(--primary-dark-background);
+	color: var(--primary-text);
+	overflow-y: auto;
+	/* Optimize text rendering */
+	text-rendering: optimizeSpeed;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 
 .will-change-transform {
-  will-change: transform;
+	will-change: transform;
 }
