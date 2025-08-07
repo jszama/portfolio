@@ -1,6 +1,6 @@
 import type { EmblaOptionsType } from "embla-carousel";
-import VideoModalButton from "../VideoModalButton";
-import TechStackCarousel from "./assets/TechStackCarousel";
+import { VideoModalButton } from "../VideoModalButton";
+import { TechStackCarousel } from "./assets/TechStackCarousel";
 
 const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
 

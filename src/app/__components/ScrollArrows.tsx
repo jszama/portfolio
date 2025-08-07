@@ -2,11 +2,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { type RefObject } from "react";
 import { useThrottle } from "./hooks";
 
-export default function ScrollArrows({
-	sliderRef,
-}: {
-	sliderRef: RefObject<HTMLDivElement | null>;
-}) {
+export function ScrollArrows({ sliderRef }: { sliderRef: RefObject<HTMLDivElement | null> }) {
 	const scrollLeft = useThrottle(() => {
 		if (sliderRef.current) {
 			sliderRef.current.scrollBy({

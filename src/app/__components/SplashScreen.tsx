@@ -1,6 +1,6 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
-export default function SplashScreen({ visible = true }: { visible?: boolean }) {
+export function SplashScreen({ visible = true }: { visible?: boolean }) {
 	return (
 		<AnimatePresence>
 			{visible && (

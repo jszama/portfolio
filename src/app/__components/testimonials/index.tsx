@@ -3,7 +3,7 @@ import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import { type ReactNode } from "react";
 import { testimonials } from "./assets";
-import TestimonialCard from "./assets/TestimonialCard";
+import { TestimonialCard } from "./assets/TestimonialCard";
 
 export default function Testimonials() {
 	return (

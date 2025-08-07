@@ -1,13 +1,13 @@
 "use client";
 import { useState } from "react";
-import Modal from "./Modal";
+import { Modal } from "./Modal";
 
 interface VideoModalButtonProps {
 	text: string;
 	videoId: string;
 }
 
-export default function VideoModalButton({ text, videoId }: VideoModalButtonProps) {
+export function VideoModalButton({ text, videoId }: VideoModalButtonProps) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (

@@ -1,5 +1,5 @@
-import { AnimatePresence, motion } from "framer-motion";
 import { Dialog } from "@headlessui/react";
+import { AnimatePresence, motion } from "framer-motion";
 import { type ReactNode } from "react";
 
 interface ModalProps {
@@ -9,7 +9,7 @@ interface ModalProps {
 	setIsOpen: (isOpen: boolean) => void;
 }
 
-export default function Modal({ className, children, isOpen, setIsOpen }: ModalProps) {
+export function Modal({ className, children, isOpen, setIsOpen }: ModalProps) {
 	return (
 		<AnimatePresence mode="wait">
 			{isOpen && (

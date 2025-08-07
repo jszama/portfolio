@@ -9,7 +9,7 @@ interface TechStackListProps {
 	techStacks: TechStack[];
 }
 
-export default function TechStackList({ techStacks }: TechStackListProps) {
+export function TechStackList({ techStacks }: TechStackListProps) {
 	return (
 		<>
 			{techStacks.map((tech: TechStack, index) => (

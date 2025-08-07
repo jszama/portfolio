@@ -8,8 +8,8 @@ import Projects from "./__components/projects";
 import Testimonials from "./__components/testimonials";
 
 import { useEffect, useState } from "react";
-import SlideInAnimation from "./__components/SlideInAnimation";
-import SplashScreen from "./__components/SplashScreen";
+import { SlideInAnimation } from "./__components/SlideInAnimation";
+import { SplashScreen } from "./__components/SplashScreen";
 
 export default function Home() {
 	const [showSplash, setShowSplash] = useState(true);

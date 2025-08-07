@@ -8,7 +8,7 @@ type SlideInAnimationProps = {
 	children: React.ReactNode;
 };
 
-export default function SlideInAnimation({
+export function SlideInAnimation({
 	duration = 0.5,
 	from = "left",
 	delay = 0,

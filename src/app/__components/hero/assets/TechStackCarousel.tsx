@@ -79,4 +79,4 @@ const TechStackCarousel: FC<PropType> = (props) => {
 	);
 };
 
-export default TechStackCarousel;
+export { TechStackCarousel };
