@@ -1,0 +1,24 @@
+#!/bin/sh
+# Pre-commit hook to check TypeScript and ESLint
+
+echo "🔍 Running pre-commit checks..."
+echo "   - TypeScript compilation"
+echo "   - ESLint validation"
+
+# Run the pre-commit script from package.json
+if ! npm run pre-commit; then
+    echo ""
+    echo "❌ Pre-commit checks failed. Commit aborted."
+    echo ""
+    echo "💡 To fix issues:"
+    echo "   • Run 'pnpm type-check' to see TypeScript errors"
+    echo "   • Run 'pnpm lint' to see ESLint errors"
+    echo "   • Run 'pnpm lint:fix' to auto-fix ESLint issues"
+    echo "   • Run 'pnpm validate' for a full check including build"
+    echo ""
+    echo "🚫 To skip this check (not recommended): git commit --no-verify"
+    exit 1
+fi
+
+echo "✅ All checks passed! Proceeding with commit."
+exit 0

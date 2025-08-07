@@ -7,10 +7,15 @@
 		"build": "next build --turbopack",
 		"start": "next start",
 		"lint": "next lint",
-		"lint:fix": "next lint --fix",
+		"lint:fix": "pnpm lint --fix",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
-		"format:lint": "pnpm format && pnpm lint:fix"
+		"type-check": "tsc --noEmit",
+		"pre-commit": "pnpm type-check && pnpm lint",
+		"format:lint": "pnpm format && pnpm lint:fix",
+		"validate": "pnpm format:check && pnpm pre-commit && pnpm build",
+		"setup-hooks": "cp scripts/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit || icacls .git\\hooks\\pre-commit /grant Everyone:F",
+		"postinstall": "pnpm setup-hooks"
 	},
 	"dependencies": {
 		"@headlessui/react": "^2.2.4",
