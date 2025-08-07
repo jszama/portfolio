@@ -12,9 +12,9 @@ const nextConfig: NextConfig = {
 	},
 	images: {
 		disableStaticImages: false,
-		qualities: [50, 60, 80, 90],
-		deviceSizes: [640, 750, 828, 1080, 1200],
-		imageSizes: [16, 32, 48, 64, 96],
+		qualities: [75, 80, 85, 90, 95],
+		deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+		imageSizes: [16, 32, 48, 64, 96, 128, 192, 256, 384],
 		remotePatterns: [
 			{
 				protocol: "https",
