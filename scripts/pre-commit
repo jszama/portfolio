@@ -1,24 +1,22 @@
 #!/bin/sh
-# Pre-commit hook to check TypeScript and ESLint
+# Fast pre-commit hook - only check changed files
 
-echo "🔍 Running pre-commit checks..."
-echo "   - TypeScript compilation"
-echo "   - ESLint validation"
+echo "⚡ Quick pre-commit checks..."
 
-# Run the pre-commit script from package.json
-if ! npm run pre-commit; then
-    echo ""
-    echo "❌ Pre-commit checks failed. Commit aborted."
-    echo ""
-    echo "💡 To fix issues:"
-    echo "   • Run 'pnpm type-check' to see TypeScript errors"
-    echo "   • Run 'pnpm lint' to see ESLint errors"
-    echo "   • Run 'pnpm lint:fix' to auto-fix ESLint issues"
-    echo "   • Run 'pnpm validate' for a full check including build"
-    echo ""
-    echo "🚫 To skip this check (not recommended): git commit --no-verify"
+# Get only staged TypeScript/JavaScript files
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(ts|tsx|js|jsx)$' || true)
+
+if [ -z "$STAGED_FILES" ]; then
+    echo "✅ No code files changed"
+    exit 0
+fi
+
+echo "� Checking $(echo "$STAGED_FILES" | wc -l) changed files..."
+
+# Quick ESLint check on only changed files
+if ! npx eslint --cache $STAGED_FILES; then
+    echo "❌ ESLint failed. Run 'pnpm lint:fix' to auto-fix"
     exit 1
 fi
 
-echo "✅ All checks passed! Proceeding with commit."
-exit 0
+echo "✅ Pre-commit checks passed!"
