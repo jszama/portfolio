@@ -1,11 +1,78 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { type ReactNode } from "react";
+import "./globals.css";
 
 export const metadata: Metadata = {
 	title: "Portfolio - Jakub Szamotulski",
 	description:
-		"Portfolio of Jakub Szamotulski, showcasing projects, skills, and experience in Software Engineering.",
+		"Portfolio of Jakub Szamotulski, a passionate Fullstack Developer and third-year Software Engineering student at the University of Strathclyde. Specialized in React, Next.js, TypeScript, and modern web technologies. Building fast, scalable applications and real solutions to real problems.",
+	keywords: [
+		"Jakub Szamotulski",
+		"Fullstack Developer",
+		"Software Engineering",
+		"React Developer",
+		"Next.js",
+		"TypeScript",
+		"Web Development",
+		"Portfolio",
+		"University of Strathclyde",
+		"Scotland",
+		"JavaScript",
+		"Frontend",
+		"Backend",
+		"jszama",
+	],
+	authors: [{ name: "Jakub Szamotulski", url: "https://github.com/jszama" }],
+	creator: "Jakub Szamotulski",
+	publisher: "Jakub Szamotulski",
+	formatDetection: {
+		email: false,
+		address: false,
+		telephone: false,
+	},
+	metadataBase: new URL("https://jszama.dev"),
+	alternates: {
+		canonical: "/",
+	},
+	openGraph: {
+		title: "Jakub Szamotulski - Fullstack Developer",
+		description:
+			"Passionate Fullstack Developer specializing in React, Next.js, and modern web technologies. Building scalable applications and innovative solutions.",
+		url: "/",
+		siteName: "Jakub Szamotulski Portfolio",
+		images: [
+			{
+				url: "/jakub_solo.jpg",
+				width: 1200,
+				height: 630,
+				alt: "Jakub Szamotulski - Fullstack Developer",
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Jakub Szamotulski - Fullstack Developer",
+		description:
+			"Passionate Fullstack Developer specializing in React, Next.js, and modern web technologies.",
+		images: ["/jakub_solo.jpg"],
+	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-video-preview": -1,
+			"max-image-preview": "large",
+			"max-snippet": -1,
+		},
+	},
+	// TODO: Google verification
+	verification: {
+		google: process.env.GOOGLE_SITE_VERIFICATION,
+	},
 };
 
 export default function RootLayout({
@@ -13,9 +80,50 @@ export default function RootLayout({
 }: Readonly<{
 	children: ReactNode;
 }>) {
+	const structuredData = {
+		"@context": "https://schema.org",
+		"@type": "Person",
+		name: "Jakub Szamotulski",
+		alternateName: "jszama",
+		jobTitle: "Fullstack Developer",
+		description:
+			"Passionate Fullstack Developer and Software Engineering student specializing in React, Next.js, and modern web technologies.",
+		url: "https://jszama.dev",
+		image: "https://jszama.dev/jakub_solo.jpg",
+		sameAs: ["https://github.com/jszama", "https://linkedin.com/in/jakub-szamotulski"],
+		alumniOf: {
+			"@type": "EducationalOrganization",
+			name: "University of Strathclyde",
+			url: "https://www.strath.ac.uk",
+		},
+		knowsAbout: [
+			"React",
+			"Next.js",
+			"TypeScript",
+			"JavaScript",
+			"Node.js",
+			"Python",
+			"Web Development",
+			"Software Engineering",
+			"Fullstack Development",
+		],
+		address: {
+			"@type": "PostalAddress",
+			addressLocality: "Aberdeen/Glasgow",
+			addressCountry: "Scotland",
+		},
+	};
+
 	return (
 		<html lang="en" className="overflow-x-hidden">
-			<head></head>
+			<head>
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+				/>
+				<link rel="icon" href="/favicon.ico" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+			</head>
 			<body className={`antialiased max-w-screen h-full overflow-y-scroll overflow-x-hidden`}>
 				{children}
 			</body>
