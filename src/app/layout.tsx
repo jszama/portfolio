@@ -1,25 +1,24 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { type ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Portfolio - Jakub Szamotulski",
-  description: "Portfolio of Jakub Szamotulski, showcasing projects, skills, and experience in Software Engineering.",
+	title: "Portfolio - Jakub Szamotulski",
+	description:
+		"Portfolio of Jakub Szamotulski, showcasing projects, skills, and experience in Software Engineering.",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: ReactNode;
 }>) {
-  return (
-    <html lang="en" className="overflow-x-hidden">
-      <head>
-      </head>
-      <body
-        className={`antialiased max-w-screen h-full overflow-y-scroll overflow-x-hidden`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en" className="overflow-x-hidden">
+			<head></head>
+			<body className={`antialiased max-w-screen h-full overflow-y-scroll overflow-x-hidden`}>
+				{children}
+			</body>
+		</html>
+	);
 }
