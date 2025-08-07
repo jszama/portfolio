@@ -1,20 +1,23 @@
 "use client";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { useScrollOverflow } from "../hooks";
-import ScrollArrows from "../ScrollArrows";
-import ProjectCard from "./assets/ProjectCard";
+import { ScrollArrows } from "../ScrollArrows";
+import { ProjectCard } from "./assets/ProjectCard";
 import { ProjectList } from "./assets/ProjectData";
 
 export default function Projects() {
 	const [showArrows, setShowArrows] = useState(false);
 	const { sliderRef, overflowing } = useScrollOverflow();
 
+	const handleMouseEnter = useCallback(() => setShowArrows(true), []);
+	const handleMouseLeave = useCallback(() => setShowArrows(false), []);
+
 	return (
 		<section
 			id="projects"
 			className="flex flex-col px-4 py-12 sm:mt-24 sm:mx-24 sm:py-0 sm:pb-12 sm:px-0 relative"
-			onMouseEnter={() => setShowArrows(true)}
-			onMouseLeave={() => setShowArrows(false)}
+			onMouseEnter={handleMouseEnter}
+			onMouseLeave={handleMouseLeave}
 		>
 			<h2 className="z-10 text-3xl text-[var(--primary-text)] font-bold">
 				Personal Projects
