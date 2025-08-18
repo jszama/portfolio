@@ -19,15 +19,14 @@ const ProjectCard = memo(function ProjectCard(props: PropType) {
 			<article className="pt-2 px-2">
 				<div
 					onClick={toggleModal}
-					className="w-[80vw] sm:w-96 h-48 overflow-hidden rounded-lg hover:drop-shadow-[0_0_6px_var(--primary-dark-background)] transition-all duration-200 cursor-pointer will-change-transform"
+					className="w-[80vw] sm:w-96 aspect-video overflow-hidden rounded-lg hover:drop-shadow-[0_0_6px_var(--primary-dark-background)] transition-all duration-200 cursor-pointer will-change-transform"
 				>
 					<Image
 						src={props.project.image}
-						width={384}
-						height={384}
+						fill
 						alt="Project Image"
 						quality={85}
-						className="w-full h-full z-0 transition-all duration-200 hover:scale-110 will-change-transform"
+						className="object-cover w-full h-full z-0 transition-all duration-200 hover:scale-110 will-change-transform"
 						placeholder="blur"
 						loading="eager"
 					/>

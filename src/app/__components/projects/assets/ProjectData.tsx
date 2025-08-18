@@ -30,7 +30,7 @@ export function ModalContentLayout({
 }) {
 	return (
 		<div className="p-4">
-			<div className="flex flex-row justify-between">
+			<div className="flex flex-col gap-4 sm:flex-row justify-between">
 				<div className="flex flex-col">
 					<h2 className="text-3xl font-bold">{title}</h2>
 					<p className="">{description}</p>
