@@ -79,13 +79,15 @@ const ExperienceCard = memo(function ExperienceCard({
 					{isExpanded && (
 						<div className="border-l-3 border-[var(--secondary-dark-background)] h-full w-full overflow-hidden px-3 text-[0.625rem] sm:text-sm text-[var(--primary-text)] pt-2 text-start font-normal relative">
 							<h4 className="hidden sm:block">{description.title}</h4>
-							<ul className="list-disc pl-1 sm:pl-5 sm:pt-2 space-y-1">
-								{description.description.map((desc, index) => (
-									<li key={index} className="text-[var(--secondary-text)]">
-										{desc}
-									</li>
-								))}
-							</ul>
+							<div className="overflow-y-clip w-full max-h-[90%]">
+								<ul className="list-disc pl-1 sm:pl-5 sm:pt-2 space-y-1">
+									{description.description.map((desc, index) => (
+										<li key={index} className="text-[var(--secondary-text)]">
+											{desc}
+										</li>
+									))}
+								</ul>
+							</div>
 							{readMore && (
 								<Button
 									className="absolute cursor-pointer bottom-2 right-2 text-[var(--primary-text)] font-bold hover:text-[var(--hover-magenta)] transition-all duration-300 ease-in-out"

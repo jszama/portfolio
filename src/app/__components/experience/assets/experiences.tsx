@@ -110,8 +110,6 @@ export const Experiences = [
 				"Worked with ArcGIS to manage and analyse geospatial data.",
 				"Automated data handling workflows with Python scripts, improving productivity by 40%.",
 				"Processed and managed vessel route data using Excel, enhancing data accuracy and accessibility.",
-				"Collaborated with a team of engineers and geologists to support offshore projects.",
-				"Quickly adapted to new technologies, demonstrating effective problem-solving in a high-paced setting.",
 			],
 		},
 		techStack: [PythonIcon],
