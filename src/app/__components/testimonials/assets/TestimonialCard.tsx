@@ -12,7 +12,7 @@ export interface Testimonial {
 
 const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Testimonial }) {
 	return (
-		<article className="flex flex-row min-w-[70dvw] min-h-[20dvh] max-h-[20dvh] sm:min-h-[32dvh] sm:max-h-[32dvh] bg-[var(--muted-background)]">
+		<article className="flex flex-row min-w-[90dvw] sm:min-w-[70dvw] min-h-[20dvh] max-h-[20dvh] sm:min-h-[32dvh] sm:max-h-[32dvh] bg-[var(--muted-background)] rounded-sm">
 			<div className="flex justify-center items-center p-4 flex-shrink-0">
 				<Image
 					src={"/jakub.jpg"}
@@ -35,7 +35,7 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 						{props.testimonial.role} at {props.testimonial.company}
 					</p>
 				</div>
-				<p className="text-sm sm:text-lg text-[var(--primary-text)] mb-1 w-full">
+				<p className="text-[0.625rem] sm:text-lg text-[var(--primary-text)] mb-1 w-[90%]">
 					&quot;{props.testimonial.testimonial}&quot;
 				</p>
 			</div>
