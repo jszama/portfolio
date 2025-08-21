@@ -26,7 +26,7 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 					onClick={() => window.open(props.testimonial.link, "_blank")}
 				/>
 			</div>
-			<div className="flex flex-col items-center justify-center w-full px-1 h-full">
+			<div className="flex flex-col justify-center w-full px-1 h-full">
 				<div className="w-full flex flex-col border-b-2 border-[var(--divider-color)] mb-2 pb-1">
 					<p className="pt-1 text-base sm:text-2xl text-[var(--heading-text)] mb-1">
 						{props.testimonial.name}
@@ -35,7 +35,7 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 						{props.testimonial.role} at {props.testimonial.company}
 					</p>
 				</div>
-				<p className="text-[0.625rem] sm:text-lg text-[var(--primary-text)] mb-1 w-[90%]">
+				<p className="text-[0.625rem] sm:text-lg text-[var(--primary-text)] mb-1 w-[90%] text-justify">
 					&quot;{props.testimonial.testimonial}&quot;
 				</p>
 			</div>
