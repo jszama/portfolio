@@ -8,7 +8,7 @@ export type ProjectType = {
 	image: StaticImageData | string;
 	techStack?: string[];
 	github?: string;
-	demo?: string;
+	website?: string;
 };
 
 export type ProjectsType = {
