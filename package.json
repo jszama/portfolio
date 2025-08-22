@@ -21,9 +21,7 @@
 	},
 	"dependencies": {
 		"@headlessui/react": "^2.2.7",
-		"@radix-ui/react-slot": "^1.2.3",
 		"@types/howler": "^2.2.12",
-		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"critters": "^0.0.25",
 		"embla-carousel": "^8.6.0",
