@@ -88,7 +88,7 @@ export function ModalContentLayout({
 					</div>
 				</div>
 				<Image
-					src={image.src}
+					src={image}
 					alt={`${company} logo`}
 					placeholder="blur"
 					className="rounded-md"

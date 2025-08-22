@@ -42,13 +42,15 @@ const ExperienceCard = memo(function ExperienceCard({
 						<div className="sm:mb-4 mb-2 sm:justify-center sm:flex sm:h-48 sm:w-48 h-36 w-36 rounded-full overflow-hidden border-2 border-[var(--primary-magenta)]">
 							<Image
 								src={company_icon}
-								alt={`${company} logo`}
+								alt={`${company} company logo`}
 								width={96}
 								height={96}
 								className="h-full w-full object-cover"
 								quality={90}
-								loading="eager"
+								loading="lazy"
 								placeholder="blur"
+								decoding="async"
+								sizes="(max-width: 640px) 144px, 192px"
 							/>
 						</div>
 						<h4 className="text-lg text-[var(--primary-text)]">{company}</h4>

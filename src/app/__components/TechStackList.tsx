@@ -16,10 +16,12 @@ export function TechStackList({ techStacks }: TechStackListProps) {
 				<Image
 					key={index}
 					src={tech.logo}
-					alt={tech.name}
+					alt={`${tech.name} technology icon`}
 					width={40}
 					height={40}
 					quality={85}
+					loading="lazy"
+					decoding="async"
 				/>
 			))}
 		</>

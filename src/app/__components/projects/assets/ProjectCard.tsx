@@ -23,12 +23,14 @@ const ProjectCard = memo(function ProjectCard(props: PropType) {
 				>
 					<Image
 						src={props.project.image}
-						fill
+						width={384}
+						height={216}
 						alt="Project Image"
 						quality={85}
 						className="object-cover w-full h-full z-0 transition-all duration-200 hover:scale-110 will-change-transform"
 						placeholder="blur"
 						loading="eager"
+						decoding="async"
 					/>
 				</div>
 				<span className="flex flex-col justify-between items-start w-full px-1">

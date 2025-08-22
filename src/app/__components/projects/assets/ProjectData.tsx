@@ -75,11 +75,12 @@ export function ModalContentLayout({
 								<Image
 									key={index}
 									src={tech}
-									alt={tech}
+									alt={`Technology icon ${index + 1}`}
 									width={20}
 									height={20}
 									quality={80}
 									loading="lazy"
+									decoding="async"
 								/>
 							))}
 						</div>
@@ -124,12 +125,16 @@ export function ModalContentLayout({
 					</div>
 				</div>
 				<Image
-					src={image.src}
-					alt={title}
+					src={image}
+					alt={`${title} project screenshot`}
 					placeholder="blur"
 					className="rounded-md"
 					width={512}
 					height={512}
+					quality={90}
+					loading="lazy"
+					decoding="async"
+					sizes="(max-width: 640px) 100vw, 512px"
 				/>
 			</div>
 			<section className="text-justify">{children}</section>
@@ -211,8 +216,22 @@ const ModalContent = {
 
 			<ModalContentLayout.Heading>Design</ModalContentLayout.Heading>
 			<ModalContentLayout.ImageSection>
-				<Image src={musclememory_design_system} alt="MuscleMemory Design System" />
-				<Image src={musclememory_ui_design} alt="MuscleMemory UI Design" />
+				<Image 
+					src={musclememory_design_system} 
+					alt="MuscleMemory Design System interface mockup" 
+					placeholder="blur"
+					quality={90}
+					loading="lazy"
+					decoding="async"
+				/>
+				<Image 
+					src={musclememory_ui_design} 
+					alt="MuscleMemory UI Design screens" 
+					placeholder="blur"
+					quality={90}
+					loading="lazy"
+					decoding="async"
+				/>
 			</ModalContentLayout.ImageSection>
 			<ModalContentLayout.Text>
 				Using Figma, I built a modern, high-fidelity design system with clean typography and
@@ -273,7 +292,14 @@ const ModalContent = {
 
 			<ModalContentLayout.Heading>Design</ModalContentLayout.Heading>
 			<ModalContentLayout.ImageSection>
-				<Image src={gesturebind_ui_design} alt="GestureBind UI Design" />
+				<Image 
+					src={gesturebind_ui_design} 
+					alt="GestureBind UI Design interface" 
+					placeholder="blur"
+					quality={90}
+					loading="lazy"
+					decoding="async"
+				/>
 			</ModalContentLayout.ImageSection>
 			<ModalContentLayout.Text>
 				The UI was intentionally minimal and lightweight, prioritising background processing

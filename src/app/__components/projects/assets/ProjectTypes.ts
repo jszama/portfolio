@@ -5,7 +5,7 @@ export type ProjectType = {
 	name: string;
 	shortDescription: string;
 	modalContent?: ReactElement;
-	image: StaticImageData | string;
+	image: StaticImageData;
 	techStack?: string[];
 	github?: string;
 	website?: string;

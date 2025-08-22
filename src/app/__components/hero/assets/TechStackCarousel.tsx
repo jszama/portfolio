@@ -65,10 +65,13 @@ const TechStackCarousel: FC<PropType> = (props) => {
 							<div className="rounded-[1.8rem] flex items-center justify-center select-none h-[var(--slide-height)] group relative">
 								<Image
 									title={value.tooltip}
-									src={value.icon.toString()}
+									src={value.icon}
 									width={size}
 									height={size}
 									alt="Programming Language Icon"
+									quality={90}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</div>
