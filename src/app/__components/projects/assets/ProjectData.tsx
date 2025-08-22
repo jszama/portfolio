@@ -70,7 +70,7 @@ export function ModalContentLayout({
 					<p className="">{description}</p>
 					<p className="text-sm text-gray-500">{date}</p>
 					{techStack && (
-						<div className="flex flex-row gap-x-2 mt-2">
+						<div className="flex flex-row gap-x-2 my-2">
 							{techStack.map((tech, index) => (
 								<Image
 									key={index}
@@ -157,7 +157,7 @@ ModalContentLayout.ListItem = function ListItem({ children }: { children: ReactN
 };
 
 ModalContentLayout.ImageSection = function ImageSection({ children }: { children: ReactNode }) {
-	return <section className="flex flex-row px-8 py-4 gap-4">{children}</section>;
+	return <section className="flex flex-col sm:flex-row px-8 py-4 gap-4">{children}</section>;
 };
 
 const MuscleMemory: ProjectType = {
@@ -257,6 +257,7 @@ const ModalContent = {
 			date="January - March 2025"
 			image={GestureBind.image as StaticImageData}
 			techStack={GestureBind.techStack}
+			github={GestureBind.github}
 		>
 			<ModalContentLayout.Text>
 				GestureBind is a cross-platform desktop application that enables device control
@@ -324,6 +325,7 @@ const ModalContent = {
 			date="January 2025"
 			image={Promptly.image as StaticImageData}
 			techStack={Promptly.techStack}
+			github={Promptly.github}
 		>
 			<ModalContentLayout.Text>
 				Promptly is an AI-powered Chrome extension that enables seamless interaction with AI
