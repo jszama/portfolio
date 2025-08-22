@@ -107,7 +107,7 @@ const ExperienceCard = memo(function ExperienceCard({
 				<Modal
 					isOpen={isOpen}
 					setIsOpen={setIsOpen}
-					className="bg-[var(--primary-dark-background)] w-full h-full"
+					className="bg-[var(--primary-dark-background)] w-full h-full overflow-y-auto"
 				>
 					{modalContent}
 				</Modal>

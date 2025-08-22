@@ -30,12 +30,12 @@ export default function Experience() {
 				className="flex space-x-6 p-2 overflow-x-scroll snap-x snap-mandatory scrollbar-thumb-[var(--hover-magenta)] scrollbar-track-[var(--secondary-dark-background)] scrollbar-hide overscroll-x-contain"
 				ref={sliderRef}
 			>
-				{Experiences.map((experience) => (
+				{Object.keys(Experiences).map((experience) => (
 					<ExperienceCard
-						key={experience.company}
-						{...experience}
-						isExpanded={expandedItem === experience.company}
-						onToggle={() => toggleItem(experience.company)}
+						key={experience}
+						{...Experiences[experience]}
+						isExpanded={expandedItem === experience}
+						onToggle={() => toggleItem(experience)}
 					/>
 				))}
 			</div>
