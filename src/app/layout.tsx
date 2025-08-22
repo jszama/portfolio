@@ -3,7 +3,7 @@ import { type ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-	title: "Portfolio - Jakub Szamotulski",
+	title: "Jakub Szamotulski | Fullstack Developer Portfolio",
 	description:
 		"Portfolio of Jakub Szamotulski, a passionate Fullstack Developer and third-year Software Engineering student at the University of Strathclyde. Specialized in React, Next.js, TypeScript, and modern web technologies. Building fast, scalable applications and real solutions to real problems.",
 	keywords: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 	},
 	metadataBase: new URL("https://jszama.dev"),
 	alternates: {
-		canonical: "/",
+		canonical: "https://jszama.dev",
 	},
 	openGraph: {
 		title: "Jakub Szamotulski - Fullstack Developer",
@@ -69,7 +69,6 @@ export const metadata: Metadata = {
 			"max-snippet": -1,
 		},
 	},
-	// TODO: Google verification
 	verification: {
 		google: process.env.GOOGLE_SITE_VERIFICATION,
 	},
@@ -90,6 +89,7 @@ export default function RootLayout({
 			"Passionate Fullstack Developer and Software Engineering student specializing in React, Next.js, and modern web technologies.",
 		url: "https://jszama.dev",
 		image: "https://jszama.dev/jakub_solo.jpg",
+		logo: "https://jszama.dev/favicon.ico",
 		sameAs: ["https://github.com/jszama", "https://linkedin.com/in/jakub-szamotulski"],
 		alumniOf: {
 			"@type": "EducationalOrganization",
