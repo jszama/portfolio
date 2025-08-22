@@ -143,9 +143,7 @@ ModalContentLayout.Text = function Text({ children }: { children: ReactNode }) {
 };
 
 ModalContentLayout.Heading = function Heading({ children }: { children: ReactNode }) {
-	return (
-		<h3 className="mt-6 mb-2 text-xl font-semibold text-[var(--heading-text)]">{children}</h3>
-	);
+	return <h3 className="mt-6 text-xl font-semibold text-[var(--heading-text)]">{children}</h3>;
 };
 
 ModalContentLayout.List = function List({ children }: { children: ReactNode }) {
