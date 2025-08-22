@@ -19,7 +19,7 @@ const ProjectCard = memo(function ProjectCard(props: PropType) {
 			<article className="pt-2 px-2">
 				<div
 					onClick={toggleModal}
-					className="w-[80vw] sm:w-96 aspect-video overflow-hidden rounded-lg hover:drop-shadow-[0_0_6px_var(--primary-dark-background)] transition-all duration-200 cursor-pointer will-change-transform"
+					className="w-[80vw] sm:w-96 aspect-video overflow-hidden rounded-lg hover:drop-shadow-[0_0_4px_var(--primary-magenta)] transition-all duration-200 cursor-pointer will-change-transform"
 				>
 					<Image
 						src={props.project.image}
@@ -58,7 +58,7 @@ const ProjectCard = memo(function ProjectCard(props: PropType) {
 			<Modal
 				isOpen={isOpen}
 				setIsOpen={setIsOpen}
-				className="bg-[var(--primary-dark-background)] w-full h-full"
+				className="bg-[var(--primary-dark-background)] w-full h-full overflow-y-auto"
 			>
 				{props.project.modalContent}
 			</Modal>
