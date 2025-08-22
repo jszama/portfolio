@@ -90,6 +90,7 @@ export function ModalContentLayout({
 				<Image
 					src={image.src}
 					alt={`${company} logo`}
+					placeholder="blur"
 					className="rounded-md"
 					width={128}
 					height={128}

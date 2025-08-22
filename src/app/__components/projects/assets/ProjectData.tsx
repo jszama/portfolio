@@ -126,6 +126,7 @@ export function ModalContentLayout({
 				<Image
 					src={image.src}
 					alt={title}
+					placeholder="blur"
 					className="rounded-md"
 					width={512}
 					height={512}
