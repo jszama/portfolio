@@ -278,15 +278,15 @@ const ModalContent = {
 		>
 			<ModalContentLayout.Text>
 				My first dedicated frontend software engineering role, where I am responsible for
-				maintaining and improving the organisation's public website. I contributed across
-				internationalisation, content management, performance optimisation, and
+				maintaining and improving the organisation&apos;s public website. I contributed
+				across internationalisation, content management, performance optimisation, and
 				accessibility, ensuring the platform meets both user expectations and sponsor
 				requirements.
 			</ModalContentLayout.Text>
 
 			<ModalContentLayout.Heading>Development</ModalContentLayout.Heading>
 			<ModalContentLayout.Text>
-				I worked on a series of key initiatives that significantly enhanced the site's
+				I worked on a series of key initiatives that significantly enhanced the site&apos;s
 				functionality, performance, and accessibility. Main contributions include:
 			</ModalContentLayout.Text>
 			<ModalContentLayout.List>
