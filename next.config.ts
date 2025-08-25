@@ -38,6 +38,59 @@ const nextConfig: NextConfig = {
 				info.resourcePath.replace(/\\/g, "/");
 		}
 
+		// SVG optimization and React component generation
+		config.module?.rules?.push({
+			test: /\.svg$/,
+			use: [
+				{
+					loader: "@svgr/webpack",
+					options: {
+						prettier: false,
+						svgo: true,
+						svgoConfig: {
+							plugins: [
+								{
+									name: "preset-default",
+									params: {
+										overrides: {
+											removeViewBox: false,
+										},
+									},
+								},
+								"cleanupListOfValues",
+								"removeStyleElement",
+								"removeScriptElement",
+							],
+						},
+						titleProp: true,
+					},
+				},
+				{
+					loader: "svgo-loader",
+					options: {
+						configFile: false,
+						js2svg: {
+							indent: 2,
+							pretty: true,
+						},
+						plugins: [
+							{
+								name: "preset-default",
+								params: {
+									overrides: {
+										removeViewBox: false,
+										cleanupIDs: false,
+									},
+								},
+							},
+							"removeDimensions",
+							"removeXMLNS",
+						],
+					},
+				},
+			],
+		});
+
 		config.module?.rules?.push({
 			test: nextImageLoaderRegex,
 			loader: "next/dist/shared/lib/image-loader",
