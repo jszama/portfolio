@@ -14,3 +14,9 @@ export const JavaIcon =
 	"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg";
 export const ElectronIcon =
 	"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg";
+export const SpringBootIcon =
+	"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg";
+export const PostgreSQLIcon =
+	"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg";
+export const SupabaseIcon =
+	"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg";
