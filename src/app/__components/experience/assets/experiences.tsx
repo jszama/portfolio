@@ -127,7 +127,7 @@ const PropEco: Experience = {
 	company: "PropEco",
 	company_icon: PropecoLogo,
 	position: "Fullstack Engineer",
-	duration: "Apr 2025 - Present",
+	duration: "Apr 2025 - August 2025",
 	description: {
 		title: "My first professional Software Engineering position, at a start-up.",
 		description: [
@@ -145,7 +145,7 @@ const Poland20: Experience = {
 	company: "Poland 2.0",
 	company_icon: Poland20Logo,
 	position: "Frontend Engineer",
-	duration: "Jan 2025 - Sep 2025",
+	duration: "Jan 2025 - Present",
 	description: {
 		title: "My first Software Engineering role, I am in charge of maintaining and improving the company website.",
 		description: [
@@ -209,9 +209,9 @@ const ModalContent = {
 
 			<ModalContentLayout.Heading>Development</ModalContentLayout.Heading>
 			<ModalContentLayout.Text>
-				My main contributions included designing and implementing scalable backend services,
-				integrating APIs, and building tools that improved both client and developer
-				experience. Key highlights include:
+				My main contributions included designing and implementing frontend interfaces and
+				scalable backend services, integrating APIs, and building tools that improved both
+				client and developer experience. Key highlights include:
 			</ModalContentLayout.Text>
 			<ModalContentLayout.List>
 				<ModalContentLayout.ListItem>
@@ -278,23 +278,15 @@ const ModalContent = {
 		>
 			<ModalContentLayout.Text>
 				My first dedicated frontend software engineering role, where I am responsible for
-				maintaining and improving the organisation’s public website. I contributed across
+				maintaining and improving the organisation's public website. I contributed across
 				internationalisation, content management, performance optimisation, and
 				accessibility, ensuring the platform meets both user expectations and sponsor
 				requirements.
 			</ModalContentLayout.Text>
 
-			<ModalContentLayout.Heading>Planning</ModalContentLayout.Heading>
-			<ModalContentLayout.Text>
-				The role required identifying high-impact improvements for usability and
-				performance. Planning focused on making the site accessible to a wider audience,
-				enabling non-technical contributors to manage content, and ensuring the platform was
-				performant and standards-compliant.
-			</ModalContentLayout.Text>
-
 			<ModalContentLayout.Heading>Development</ModalContentLayout.Heading>
 			<ModalContentLayout.Text>
-				I worked on a series of key initiatives that significantly enhanced the site’s
+				I worked on a series of key initiatives that significantly enhanced the site's
 				functionality, performance, and accessibility. Main contributions include:
 			</ModalContentLayout.Text>
 			<ModalContentLayout.List>
