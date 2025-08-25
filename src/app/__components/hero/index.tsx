@@ -64,7 +64,7 @@ export default function Hero() {
 				<div className="flex flex-row space-x-4 h-full items-baseline">
 					<VideoModalButton text="Watch Now" videoId="JwYzHW_q3c4" />
 					<a
-						href={"/resume.pdf"}
+						href={"/Jakub_Szamotulski_Resume.pdf"}
 						target="_blank"
 						title="Read my resume!"
 						className="transition-all duration-200 hover:scale-105 bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded flex justify-center w-full h-auto sm:w-auto"
