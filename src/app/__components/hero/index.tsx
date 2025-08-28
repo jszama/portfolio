@@ -4,9 +4,7 @@ import { TechStackCarousel } from "./assets/TechStackCarousel";
 
 const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
 
-// TODO: New Image
-// TODO: New Video
-
+// TODO: Record Video
 export default function Hero() {
 	return (
 		<section
@@ -17,7 +15,7 @@ export default function Hero() {
 			<div
 				className="absolute inset-0 bg-cover bg-top sm:bg-right bg-no-repeat transform-gpu"
 				style={{
-					backgroundImage: "url('/jakub_solo.jpg')",
+					backgroundImage: "url('/hero_section_thumbnail.png')",
 					willChange: "transform",
 				}}
 			/>
