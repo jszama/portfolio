@@ -2,13 +2,18 @@ import Image, { type StaticImageData } from "next/image";
 import { type ReactNode } from "react";
 import {
 	ElectronIcon,
+	JavaIcon,
 	JavascriptIcon,
 	MongoDBIcon,
 	NextJsIcon,
 	PythonIcon,
-	ReactIcon,
+	SpringBootIcon,
+	SupabaseIcon,
 	TypescriptIcon,
 } from "../../TechStackIcons";
+import euthymia_design_system from "./euthymia/euthymia_design_system.png";
+import euthymia_thumbnail from "./euthymia/euthymia_thumbnail.png";
+import euthymia_ui_design from "./euthymia/euthymia_ui_design.png";
 import gesturebind_thumbnail from "./gesturebind/gesturebind_thumbnail.webp";
 import gesturebind_ui_design from "./gesturebind/gesturebind_ui_design.png";
 import musclememory_design_system from "./musclememory/modal-content-images/musclememory_design_system.png";
@@ -161,14 +166,25 @@ ModalContentLayout.ListItem = function ListItem({ children }: { children: ReactN
 };
 
 ModalContentLayout.ImageSection = function ImageSection({ children }: { children: ReactNode }) {
-	return <section className="flex flex-col sm:flex-row px-8 py-4 gap-4">{children}</section>;
+	return (
+		<section className="flex flex-col w-full sm:flex-row flex-wrap px-8 py-4 gap-4">
+			{children}
+		</section>
+	);
+};
+
+const Euthymia: ProjectType = {
+	name: "Euthymia [WIP]",
+	shortDescription: "Mental health tracking application",
+	image: euthymia_thumbnail,
+	techStack: [NextJsIcon, TypescriptIcon, JavaIcon, SpringBootIcon, SupabaseIcon],
 };
 
 const MuscleMemory: ProjectType = {
 	name: "MuscleMemory",
 	shortDescription: "Workout tracking application",
 	image: musclememory_thumbnail,
-	techStack: [NextJsIcon, ReactIcon, TypescriptIcon, MongoDBIcon],
+	techStack: [NextJsIcon, TypescriptIcon, MongoDBIcon],
 	github: "https://github.com/jszama/musclememory",
 	website: "https://musclememory-theta.vercel.app/",
 };
@@ -190,12 +206,71 @@ const Promptly: ProjectType = {
 };
 
 const ModalContent = {
+	Euthymia: (
+		<ModalContentLayout
+			title={Euthymia.name}
+			description={Euthymia.shortDescription}
+			date="July 2025 - Ongoing"
+			image={Euthymia.image}
+			techStack={Euthymia.techStack}
+		>
+			<ModalContentLayout.Text>
+				Euthymia is a mental health tracking application that allows users to monitor their
+				mood, activities, and overall well-being. The app provides insights and
+				recommendations based on user input, helping individuals make informed decisions
+				about their mental health.
+			</ModalContentLayout.Text>
+			<ModalContentLayout.Heading>Planning</ModalContentLayout.Heading>
+			<ModalContentLayout.Text>
+				Planning for Euthymia began with competitor analysis, focusing on existing mental
+				health apps to identify strengths and weaknesses. This research informed the feature
+				set and user experience/interface design.
+			</ModalContentLayout.Text>
+			<ModalContentLayout.Heading>Design</ModalContentLayout.Heading>
+			<ModalContentLayout.Text>
+				The design phase involved creating a design system and prototypes using Figma. The
+				goal was to develop a user-friendly interface that encourages regular engagement and
+				provides clear insights into mental health trends.
+			</ModalContentLayout.Text>
+			<ModalContentLayout.ImageSection>
+				<Image
+					src={euthymia_design_system}
+					alt="Euthymia Design System interface mockup"
+					placeholder="blur"
+					quality={90}
+					loading="lazy"
+					decoding="async"
+				/>
+				<Image
+					src={euthymia_ui_design}
+					alt="Euthymia UI Design screens"
+					placeholder="blur"
+					quality={90}
+					loading="lazy"
+					decoding="async"
+				/>
+			</ModalContentLayout.ImageSection>
+			<ModalContentLayout.Heading>Development</ModalContentLayout.Heading>
+			<ModalContentLayout.Text>
+				The authentication system and pages for the app have been built, currently we are
+				working on the main features of the app, including:
+			</ModalContentLayout.Text>
+			<ModalContentLayout.List>
+				<ModalContentLayout.ListItem>Activity tracking</ModalContentLayout.ListItem>
+				<ModalContentLayout.ListItem>Mood journaling</ModalContentLayout.ListItem>
+				<ModalContentLayout.ListItem>Goal setting and tracking</ModalContentLayout.ListItem>
+				<ModalContentLayout.ListItem>
+					Insights and recommendations
+				</ModalContentLayout.ListItem>
+			</ModalContentLayout.List>
+		</ModalContentLayout>
+	),
 	MuscleMemory: (
 		<ModalContentLayout
 			title={MuscleMemory.name}
 			description={MuscleMemory.shortDescription}
 			date="March - December 2024"
-			image={MuscleMemory.image as StaticImageData}
+			image={MuscleMemory.image}
 			techStack={MuscleMemory.techStack}
 			github={MuscleMemory.github}
 			website={MuscleMemory.website}
@@ -216,17 +291,17 @@ const ModalContent = {
 
 			<ModalContentLayout.Heading>Design</ModalContentLayout.Heading>
 			<ModalContentLayout.ImageSection>
-				<Image 
-					src={musclememory_design_system} 
-					alt="MuscleMemory Design System interface mockup" 
+				<Image
+					src={musclememory_design_system}
+					alt="MuscleMemory Design System interface mockup"
 					placeholder="blur"
 					quality={90}
 					loading="lazy"
 					decoding="async"
 				/>
-				<Image 
-					src={musclememory_ui_design} 
-					alt="MuscleMemory UI Design screens" 
+				<Image
+					src={musclememory_ui_design}
+					alt="MuscleMemory UI Design screens"
 					placeholder="blur"
 					quality={90}
 					loading="lazy"
@@ -273,7 +348,7 @@ const ModalContent = {
 			title={GestureBind.name}
 			description={GestureBind.shortDescription}
 			date="January - March 2025"
-			image={GestureBind.image as StaticImageData}
+			image={GestureBind.image}
 			techStack={GestureBind.techStack}
 			github={GestureBind.github}
 		>
@@ -292,9 +367,9 @@ const ModalContent = {
 
 			<ModalContentLayout.Heading>Design</ModalContentLayout.Heading>
 			<ModalContentLayout.ImageSection>
-				<Image 
-					src={gesturebind_ui_design} 
-					alt="GestureBind UI Design interface" 
+				<Image
+					src={gesturebind_ui_design}
+					alt="GestureBind UI Design interface"
 					placeholder="blur"
 					quality={90}
 					loading="lazy"
@@ -348,7 +423,7 @@ const ModalContent = {
 			title={Promptly.name}
 			description={Promptly.shortDescription}
 			date="January 2025"
-			image={Promptly.image as StaticImageData}
+			image={Promptly.image}
 			techStack={Promptly.techStack}
 			github={Promptly.github}
 		>
@@ -403,9 +478,10 @@ const ModalContent = {
 };
 
 export const ProjectList: ProjectsType = {
+	Euthymia: { ...Euthymia, modalContent: ModalContent.Euthymia },
 	MuscleMemory: { ...MuscleMemory, modalContent: ModalContent.MuscleMemory },
 	GestureBind: { ...GestureBind, modalContent: ModalContent.GestureBind },
 	Promptly: { ...Promptly, modalContent: ModalContent.Promptly },
 };
 
-export { GestureBind, MuscleMemory, Promptly };
+export { Euthymia, GestureBind, MuscleMemory, Promptly };
