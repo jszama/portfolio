@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 
 const NavigationItems = [
-	{ name: "About me", href: "#about-me" },
 	{ name: "Projects", href: "#projects" },
 	{ name: "Experience", href: "#experience" },
 	{ name: "Testimonials", href: "#testimonials" },
+	{ name: "Certifications", href: "#certifications" },
+	// { name: "FAQ", href: "#faq" },
 ];
 
 export default function Header() {
@@ -14,11 +15,13 @@ export default function Header() {
 		<header className="text-[var(--primary-text)] w-screen fixed top-0 z-50 border-b-2 border-[var(--hover-magenta)] bg-[var(--secondary-dark-background)] opacity-95">
 			<div className="flex justify-between items-center px-3 sm:px-4 md:px-6 py-4">
 				<h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[var(--hover-magenta)]">
-					<TypeAnimation
-						sequence={["", 1300, "Jakub Maciej Szamotulski", 600, "jszama."]}
-						speed={60}
-						className="inline-block"
-					/>
+					<a href="#about-me">
+						<TypeAnimation
+							sequence={["", 1300, "Jakub Maciej Szamotulski", 600, "jszama."]}
+							speed={60}
+							className="inline-block"
+						/>
+					</a>
 				</h1>
 				<DropDownMenu />
 				<NavBar />
@@ -76,22 +79,7 @@ function DropDownMenu() {
 				<div className="absolute top-12 right-2 bg-[var(--secondary-dark-background)] border-2 border-[var(--primary-magenta)] text-[var(--primary-text)] rounded-md shadow-lg px-4 py-2">
 					<ul className="space-y-2">
 						{NavigationItems.map((item) => (
-							<li
-								key={item.name}
-								className="hover:text-[var(--hover-magenta)] transition-all duration-200"
-							>
-								<a
-									href={item.href}
-									onClick={(e) => {
-										e.preventDefault();
-										document
-											.querySelector(item.href)
-											?.scrollIntoView({ behavior: "smooth" });
-									}}
-								>
-									{item.name}
-								</a>
-							</li>
+							<NavigationItem key={item.name} name={item.name} href={item.href} />
 						))}
 					</ul>
 				</div>
@@ -114,7 +102,7 @@ function NavBar() {
 
 function NavigationItem({ name, href }: { name: string; href: string }) {
 	return (
-		<li className="text-[var(--primary-text)] hover:text-[var(--hover-magenta)] transition-all duration-200">
+		<li className="text-[var(--primary-text)] hover:text-[var(--hover-magenta)] transition-[color] duration-200">
 			<a
 				href={href}
 				onClick={(e) => {
