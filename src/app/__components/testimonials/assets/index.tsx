@@ -1,13 +1,15 @@
 import { type Testimonial } from "./TestimonialCard";
+import Michael_Ajayi from "./michael_ajayi.jpg";
 
-export const testimonials = [
+export const testimonials: Testimonial[] = [
 	{
-		name: "John Doe",
-		role: "Software Engineer",
-		company: "Tech Solutions",
+		name: "Michael Ajayi",
+		role: "Mentor & Senior Software Engineer",
+		company: "Motopay",
 		testimonial:
-			"Working with this team was a game-changer for our project. Their expertise and dedication were evident from day one.",
-		image: "/images/testimonials/john_doe.jpg",
+			"Jakub and I crossed paths at a pivotal moment, when we had to choose between staying comfortable at our current level or investing the time and resources to reach the next one. I'm grateful that our friendship and collaboration carried us through to success. I'd do it all over again in a heartbeat.",
+		image: Michael_Ajayi,
+		link: "https://www.linkedin.com/in/michael-ajayi/",
 	},
 	{
 		name: "Jane Smith",
