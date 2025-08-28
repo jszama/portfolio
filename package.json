@@ -21,7 +21,6 @@
 	},
 	"dependencies": {
 		"@headlessui/react": "^2.2.7",
-		"@types/howler": "^2.2.12",
 		"clsx": "^2.1.1",
 		"critters": "^0.0.25",
 		"embla-carousel": "^8.6.0",
@@ -40,6 +39,7 @@
 		"@next/eslint-plugin-next": "^15.5.0",
 		"@svgr/webpack": "^8.1.0",
 		"@tailwindcss/postcss": "^4.1.12",
+		"@types/howler": "^2.2.12",
 		"@types/node": "^20.17.50",
 		"@types/react": "19.1.5",
 		"@types/react-dom": "19.1.5",
