@@ -12,8 +12,8 @@ export interface Testimonial {
 
 const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Testimonial }) {
 	return (
-		<article className="flex flex-row min-w-[90dvw] sm:min-w-[70dvw] min-h-[20dvh] max-h-[20dvh] sm:min-h-[32dvh] sm:max-h-[32dvh] bg-[var(--muted-background)] rounded-sm">
-			<div className="flex justify-center items-center p-4 flex-shrink-0">
+		<article className="flex flex-row min-w-[90dvw] sm:min-w-[70dvw] min-h-[20dvh] max-h-[20dvh] sm:min-h-[36dvh] sm:max-h-[36dvh] bg-[var(--muted-background)] rounded-sm overflow-y-auto">
+			<div className="flex justify-center items-center p-2 sm:p-4 flex-shrink-0">
 				<Image
 					src={props.testimonial.image}
 					width={192}
@@ -28,8 +28,8 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 			</div>
 			<div className="flex flex-col justify-center w-full px-1 h-full">
 				<div className="w-full flex flex-col border-b-2 border-[var(--divider-color)] mb-2 pb-1">
-					<div className="flex flex-row items-center gap-x-2">
-						<p className="text-base sm:text-2xl text-[var(--heading-text)]">
+					<div className="flex flex-row items-center gap-x-1 sm:gap-x-2">
+						<p className="text-xs sm:text-2xl text-[var(--heading-text)]">
 							{props.testimonial.name}
 						</p>
 						<a
@@ -40,7 +40,7 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								className="h-5 w-5"
+								className="h-3 w-3 sm:h-5 sm:w-5"
 								viewBox="0 0 24 24"
 								fill="currentColor"
 							>
@@ -48,11 +48,11 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 							</svg>
 						</a>
 					</div>
-					<p className="text-xs sm:text-base text-[var(--secondary-text)] mb-1">
+					<p className="text-[0.625rem] sm:text-base text-[var(--secondary-text)] mb-1">
 						{props.testimonial.role} @ {props.testimonial.company}
 					</p>
 				</div>
-				<p className="text-[0.625rem] sm:text-lg text-[var(--primary-text)] mb-1 w-[90%] text-justify">
+				<p className="text-[0.625rem] sm:text-lg text-[var(--primary-text)] mb-1 w-[95%] text-justify">
 					<em>&quot;{props.testimonial.testimonial}&quot;</em>
 				</p>
 			</div>
