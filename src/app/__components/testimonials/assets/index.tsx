@@ -1,5 +1,5 @@
 import { type Testimonial } from "./TestimonialCard";
-import Michael_Ajayi from "./michael_ajayi.jpg";
+import Michael_Ajayi from "./michael_ajayi.webp";
 
 export const testimonials: Testimonial[] = [
 	{

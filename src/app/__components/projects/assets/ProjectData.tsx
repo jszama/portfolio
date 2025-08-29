@@ -11,15 +11,15 @@ import {
 	SupabaseIcon,
 	TypescriptIcon,
 } from "../../TechStackIcons";
-import euthymia_design_system from "./euthymia/euthymia_design_system.png";
-import euthymia_thumbnail from "./euthymia/euthymia_thumbnail.png";
-import euthymia_ui_design from "./euthymia/euthymia_ui_design.png";
+import euthymia_design_system from "./euthymia/euthymia_design_system.webp";
+import euthymia_thumbnail from "./euthymia/euthymia_thumbnail.webp";
+import euthymia_ui_design from "./euthymia/euthymia_ui_design.webp";
 import gesturebind_thumbnail from "./gesturebind/gesturebind_thumbnail.webp";
-import gesturebind_ui_design from "./gesturebind/gesturebind_ui_design.png";
-import musclememory_design_system from "./musclememory/modal-content-images/musclememory_design_system.png";
-import musclememory_ui_design from "./musclememory/modal-content-images/musclememory_ui_design.png";
+import gesturebind_ui_design from "./gesturebind/gesturebind_ui_design.webp";
+import musclememory_design_system from "./musclememory/modal-content-images/musclememory_design_system.webp";
+import musclememory_ui_design from "./musclememory/modal-content-images/musclememory_ui_design.webp";
 import musclememory_thumbnail from "./musclememory/musclememory_thumbnail.webp";
-import promptly_thumbnail from "./promptly/promptly_thumbnail.png";
+import promptly_thumbnail from "./promptly/promptly_thumbnail.webp";
 
 import { type ProjectType, type ProjectsType } from "./ProjectTypes";
 

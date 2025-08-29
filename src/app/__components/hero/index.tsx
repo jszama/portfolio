@@ -15,7 +15,7 @@ export default function Hero() {
 			<div
 				className="absolute inset-0 bg-cover bg-top sm:bg-right bg-no-repeat transform-gpu"
 				style={{
-					backgroundImage: "url('/hero_section_thumbnail.png')",
+					backgroundImage: "url('/hero_section_thumbnail.webp')",
 					willChange: "transform",
 				}}
 			/>

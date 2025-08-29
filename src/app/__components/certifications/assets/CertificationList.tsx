@@ -1,9 +1,9 @@
 import type { StaticImageData } from "next/image";
 import CertificateCard from "./CertificateCard";
-import DeansListCertificate from "./deans_list.jpg";
-import JPMorganCertificate from "./jpmorgan.png";
-import PostmanCertificate from "./postman.jpg";
-import WalmartCertificate from "./walmart.png";
+import DeansListCertificate from "./deans_list.webp";
+import JPMorganCertificate from "./jpmorgan.webp";
+import PostmanCertificate from "./postman.webp";
+import WalmartCertificate from "./walmart.webp";
 
 interface Certificate {
 	image: StaticImageData;
