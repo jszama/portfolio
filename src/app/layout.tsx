@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 		siteName: "Jakub Szamotulski Portfolio",
 		images: [
 			{
-				url: "/jakub_solo.jpg",
+				url: "/hero_section_thumbnail.webp",
 				width: 1200,
 				height: 630,
 				alt: "Jakub Szamotulski - Fullstack Developer",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 		title: "Jakub Szamotulski - Fullstack Developer",
 		description:
 			"Passionate Fullstack Developer specializing in React, Next.js, and modern web technologies.",
-		images: ["/jakub_solo.jpg"],
+		images: ["/hero_section_thumbnail.webp"],
 	},
 	robots: {
 		index: true,
@@ -88,7 +88,7 @@ export default function RootLayout({
 		description:
 			"Passionate Fullstack Developer and Software Engineering student specializing in React, Next.js, and modern web technologies.",
 		url: "https://jszama.dev",
-		image: "https://jszama.dev/jakub_solo.jpg",
+		image: "https://jszama.dev/hero_section_thumbnail.webp",
 		logo: "https://jszama.dev/favicon.ico",
 		sameAs: ["https://github.com/jszama", "https://linkedin.com/in/jakub-szamotulski"],
 		alumniOf: {
