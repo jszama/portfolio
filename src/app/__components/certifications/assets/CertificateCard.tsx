@@ -23,7 +23,7 @@ export default function CertificateCard({ image, title, description, link }: Cer
 				<div className="relative mb-4">
 					<Image
 						src={image}
-						alt={title}
+						alt={`${title} certificate`}
 						width={300}
 						height={200}
 						placeholder="blur"

@@ -15,7 +15,7 @@ export default function Header() {
 		<header className="text-[var(--primary-text)] w-screen fixed top-0 z-50 border-b-2 border-[var(--hover-magenta)] bg-[var(--secondary-dark-background)] opacity-95">
 			<div className="flex justify-between items-center px-3 sm:px-4 md:px-6 py-4">
 				<h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[var(--hover-magenta)]">
-					<a href="#about-me">
+					<a href="#about-me" aria-label="Go to Home">
 						<TypeAnimation
 							sequence={["", 1300, "Jakub Maciej Szamotulski", 600, "jszama."]}
 							speed={60}
@@ -104,6 +104,7 @@ function NavigationItem({ name, href }: { name: string; href: string }) {
 	return (
 		<li className="text-[var(--primary-text)] hover:text-[var(--hover-magenta)] transition-[color] duration-200">
 			<a
+				aria-label={`Go to ${name}`}
 				href={href}
 				onClick={(e) => {
 					e.preventDefault();
