@@ -200,7 +200,7 @@ const GestureBind: ProjectType = {
 
 const Promptly: ProjectType = {
 	name: "Promptly",
-	shortDescription: "AI powered prompt generator",
+	shortDescription: "AI assistant Chrome extension",
 	image: promptly_thumbnail,
 	techStack: [JavascriptIcon],
 	github: "https://github.com/jszama/promptly/",
