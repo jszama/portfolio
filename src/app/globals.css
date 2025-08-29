@@ -31,12 +31,12 @@ html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 100px;
 	overflow: auto;
-	scrollbar-width: none;
+	scrollbar-width: thin;
 	-ms-overflow-style: none;
 }
 
 html::-webkit-scrollbar {
-	display: none;
+	scrollbar-width: thin;
 }
 
 body {
