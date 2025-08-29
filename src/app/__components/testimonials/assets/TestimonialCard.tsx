@@ -18,7 +18,7 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 					src={props.testimonial.image}
 					width={192}
 					height={192}
-					alt="Profile Image"
+					alt={`${props.testimonial.name}'s LinkedIn Profile Image`}
 					quality={90}
 					className="transition-transform duration-200 hover:scale-105 will-change-transform cursor-pointer w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-full object-cover"
 					// placeholder='blur'
@@ -37,6 +37,7 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 							target="_blank"
 							rel="noopener noreferrer"
 							className="cursor-pointer transition-transform duration-200 flex items-center hover:text-[#0083c9] pt-1"
+							aria-label={`Go to ${props.testimonial.name}'s profile`}
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
