@@ -203,7 +203,7 @@ const Promptly: ProjectType = {
 	shortDescription: "AI powered prompt generator",
 	image: promptly_thumbnail,
 	techStack: [JavascriptIcon],
-	github: "https://github.com/jszama/gemini-assistant-extension",
+	github: "https://github.com/jszama/promptly/",
 };
 
 const ModalContent = {
