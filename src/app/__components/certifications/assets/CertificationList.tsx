@@ -1,6 +1,6 @@
 import type { StaticImageData } from "next/image";
 import CertificateCard from "./CertificateCard";
-import DeansListCertificate from "./deans_list.png";
+import DeansListCertificate from "./deans_list.jpg";
 import JPMorganCertificate from "./jpmorgan.png";
 import PostmanCertificate from "./postman.jpg";
 import WalmartCertificate from "./walmart.png";
@@ -36,7 +36,7 @@ const Certificates: Certificate[] = [
 	},
 	{
 		image: DeansListCertificate,
-		title: "Dean's List - University of Strathclyde",
+		title: "2x Dean's List",
 		description:
 			"Recognised for academic excellence by being placed on the Dean's List for a consecutive 2 years, averaging a grade of >= 80%.",
 		link: "./Jakub_Szamotulski_Deans_List.pdf",
