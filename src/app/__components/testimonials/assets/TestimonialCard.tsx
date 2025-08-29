@@ -12,7 +12,7 @@ export interface Testimonial {
 
 const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Testimonial }) {
 	return (
-		<article className="flex flex-row min-w-[90dvw] sm:min-w-[70dvw] min-h-[20dvh] max-h-[20dvh] sm:min-h-[36dvh] sm:max-h-[36dvh] bg-[var(--muted-background)] rounded-sm overflow-y-auto">
+		<article className="flex flex-row min-w-[90dvw] sm:min-w-[80dvw] min-h-[20dvh] max-h-[20dvh] sm:min-h-[32dvh] sm:max-h-[38dvh] bg-[var(--muted-background)] rounded-sm">
 			<div className="flex justify-center items-center p-2 sm:p-4 flex-shrink-0">
 				<Image
 					src={props.testimonial.image}
@@ -20,7 +20,7 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 					height={192}
 					alt="Profile Image"
 					quality={90}
-					className="transition-transform duration-200 hover:scale-105 will-change-transform cursor-pointer w-24 h-24 sm:w-48 sm:h-48 rounded-full object-cover"
+					className="transition-transform duration-200 hover:scale-105 will-change-transform cursor-pointer w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-full object-cover"
 					// placeholder='blur'
 					loading="eager"
 					onClick={() => window.open(props.testimonial.link, "_blank")}
@@ -29,7 +29,7 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 			<div className="flex flex-col justify-center w-full px-1 h-full">
 				<div className="w-full flex flex-col border-b-2 border-[var(--divider-color)] mb-2 pb-1">
 					<div className="flex flex-row items-center gap-x-1 sm:gap-x-2">
-						<p className="text-xs sm:text-2xl text-[var(--heading-text)]">
+						<p className="text-xs sm:text-base md:text-2xl text-[var(--heading-text)]">
 							{props.testimonial.name}
 						</p>
 						<a
@@ -40,7 +40,7 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								className="h-3 w-3 sm:h-5 sm:w-5"
+								className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5"
 								viewBox="0 0 24 24"
 								fill="currentColor"
 							>
@@ -48,11 +48,11 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 							</svg>
 						</a>
 					</div>
-					<p className="text-[0.625rem] sm:text-base text-[var(--secondary-text)] mb-1">
+					<p className="text-[0.625rem] sm:text-sm md:text-base text-[var(--secondary-text)] mb-1">
 						{props.testimonial.role} @ {props.testimonial.company}
 					</p>
 				</div>
-				<p className="text-[0.625rem] sm:text-lg text-[var(--primary-text)] mb-1 w-[95%] text-justify">
+				<p className="text-[0.625rem] sm:text-sm md:text-lg text-[var(--primary-text)] mb-1 w-[95%] text-justify overflow-ellipsis">
 					<em>&quot;{props.testimonial.testimonial}&quot;</em>
 				</p>
 			</div>
