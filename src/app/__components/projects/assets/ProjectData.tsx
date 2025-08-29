@@ -19,6 +19,7 @@ import gesturebind_ui_design from "./gesturebind/gesturebind_ui_design.png";
 import musclememory_design_system from "./musclememory/modal-content-images/musclememory_design_system.png";
 import musclememory_ui_design from "./musclememory/modal-content-images/musclememory_ui_design.png";
 import musclememory_thumbnail from "./musclememory/musclememory_thumbnail.webp";
+import promptly_thumbnail from "./promptly/promptly_thumbnail.png";
 
 import { type ProjectType, type ProjectsType } from "./ProjectTypes";
 
@@ -200,7 +201,7 @@ const GestureBind: ProjectType = {
 const Promptly: ProjectType = {
 	name: "Promptly",
 	shortDescription: "AI powered prompt generator",
-	image: musclememory_thumbnail,
+	image: promptly_thumbnail,
 	techStack: [JavascriptIcon],
 	github: "https://github.com/jszama/gemini-assistant-extension",
 };
