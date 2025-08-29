@@ -221,6 +221,16 @@ const ModalContent = {
 				recommendations based on user input, helping individuals make informed decisions
 				about their mental health.
 			</ModalContentLayout.Text>
+			<ModalContentLayout.Text>
+				This project is a collaboration with a friend and fellow student,{" "}
+				<a
+					href="https://www.linkedin.com/in/jack-allones/"
+					className="underline text-blue-500 hover:text-blue-700"
+				>
+					Jack Allones
+				</a>
+				.
+			</ModalContentLayout.Text>
 			<ModalContentLayout.Heading>Planning</ModalContentLayout.Heading>
 			<ModalContentLayout.Text>
 				Planning for Euthymia began with competitor analysis, focusing on existing mental
