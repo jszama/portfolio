@@ -1,22 +1,73 @@
-export const JavascriptIcon =
-	"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg";
-export const NextJsIcon =
-	"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg";
-export const ReactIcon =
-	"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg";
-export const TypescriptIcon =
-	"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg";
-export const MongoDBIcon =
-	"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg";
-export const PythonIcon =
-	"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg";
-export const JavaIcon =
-	"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg";
-export const ElectronIcon =
-	"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg";
-export const SpringBootIcon =
-	"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg";
-export const PostgreSQLIcon =
-	"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg";
-export const SupabaseIcon =
-	"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg";
+export type TechStackIcon = {
+	title: string;
+	url: string;
+};
+
+const JavaScriptIcon: TechStackIcon = {
+	title: "JavaScript",
+	url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+};
+
+const NextJSIcon: TechStackIcon = {
+	title: "Next.js",
+	url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+};
+
+const ReactIcon: TechStackIcon = {
+	title: "React",
+	url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+};
+
+const TypeScriptIcon: TechStackIcon = {
+	title: "TypeScript",
+	url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+};
+
+const MongoDBIcon: TechStackIcon = {
+	title: "MongoDB",
+	url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg",
+};
+
+const PythonIcon: TechStackIcon = {
+	title: "Python",
+	url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+};
+
+const JavaIcon: TechStackIcon = {
+	title: "Java",
+	url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+};
+
+const ElectronIcon: TechStackIcon = {
+	title: "Electron",
+	url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg",
+};
+
+const SpringBootIcon: TechStackIcon = {
+	title: "Spring Boot",
+	url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
+};
+
+const PostgreSQLIcon: TechStackIcon = {
+	title: "PostgreSQL",
+	url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+};
+
+const SupabaseIcon: TechStackIcon = {
+	title: "Supabase",
+	url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+};
+
+export {
+	ElectronIcon,
+	JavaIcon,
+	JavaScriptIcon,
+	MongoDBIcon,
+	NextJSIcon,
+	PostgreSQLIcon,
+	PythonIcon,
+	ReactIcon,
+	SpringBootIcon,
+	SupabaseIcon,
+	TypeScriptIcon,
+};

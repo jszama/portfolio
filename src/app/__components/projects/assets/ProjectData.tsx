@@ -3,13 +3,14 @@ import { type ReactNode } from "react";
 import {
 	ElectronIcon,
 	JavaIcon,
-	JavascriptIcon,
+	JavaScriptIcon,
 	MongoDBIcon,
-	NextJsIcon,
+	NextJSIcon,
 	PythonIcon,
 	SpringBootIcon,
 	SupabaseIcon,
-	TypescriptIcon,
+	TypeScriptIcon,
+	type TechStackIcon,
 } from "../../TechStackIcons";
 import euthymia_design_system from "./euthymia/euthymia_design_system.webp";
 import euthymia_thumbnail from "./euthymia/euthymia_thumbnail.webp";
@@ -64,7 +65,7 @@ export function ModalContentLayout({
 	description: string;
 	date: string;
 	image: StaticImageData;
-	techStack?: string[];
+	techStack?: TechStackIcon[];
 	github?: string;
 	website?: string;
 }) {
@@ -80,7 +81,8 @@ export function ModalContentLayout({
 							{techStack.map((tech, index) => (
 								<Image
 									key={index}
-									src={tech}
+									title={tech.title}
+									src={tech.url}
 									alt={`Technology icon ${index + 1}`}
 									width={20}
 									height={20}
@@ -178,14 +180,14 @@ const Euthymia: ProjectType = {
 	name: "Euthymia [WIP]",
 	shortDescription: "Mental health tracking application",
 	image: euthymia_thumbnail,
-	techStack: [NextJsIcon, TypescriptIcon, JavaIcon, SpringBootIcon, SupabaseIcon],
+	techStack: [NextJSIcon, TypeScriptIcon, JavaIcon, SpringBootIcon, SupabaseIcon],
 };
 
 const MuscleMemory: ProjectType = {
 	name: "MuscleMemory",
 	shortDescription: "Workout tracking application",
 	image: musclememory_thumbnail,
-	techStack: [NextJsIcon, TypescriptIcon, MongoDBIcon],
+	techStack: [NextJSIcon, TypeScriptIcon, MongoDBIcon],
 	github: "https://github.com/jszama/musclememory",
 	website: "https://musclememory-theta.vercel.app/",
 };
@@ -202,7 +204,7 @@ const Promptly: ProjectType = {
 	name: "Promptly",
 	shortDescription: "AI assistant Chrome extension",
 	image: promptly_thumbnail,
-	techStack: [JavascriptIcon],
+	techStack: [JavaScriptIcon],
 	github: "https://github.com/jszama/promptly/",
 };
 

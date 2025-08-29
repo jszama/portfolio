@@ -45,12 +45,13 @@ const ProjectCard = memo(function ProjectCard(props: PropType) {
 							{props.project.techStack.map((tech, index) => (
 								<Image
 									key={index}
-									src={tech}
-									alt={tech}
+									src={tech.url}
+									alt={`${tech.title} icon`}
 									width={20}
 									height={20}
 									quality={80}
 									loading="lazy"
+									title={tech.title}
 								/>
 							))}
 						</div>

@@ -60,8 +60,9 @@ const ExperienceCard = memo(function ExperienceCard({
 								techStack.map((tech, index) => (
 									<Image
 										key={index}
-										src={tech}
-										alt={tech}
+										src={tech.url}
+										alt={tech.title}
+										title={tech.title}
 										width={24}
 										height={24}
 										className="h-6 w-6 object-contain"

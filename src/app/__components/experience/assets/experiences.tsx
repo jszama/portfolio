@@ -1,7 +1,13 @@
 import Image, { type StaticImageData } from "next/image";
 import { type ReactNode } from "react";
 import { ProjectLinkButton } from "../../projects/assets/ProjectData";
-import { NextJsIcon, PythonIcon, ReactIcon, TypescriptIcon } from "../../TechStackIcons";
+import {
+	NextJSIcon,
+	PythonIcon,
+	ReactIcon,
+	TypeScriptIcon,
+	type TechStackIcon,
+} from "../../TechStackIcons";
 import { OutlierLogo, Poland20Logo, PropecoLogo, Subsea7Logo } from "./index";
 
 export type Description = {
@@ -15,7 +21,7 @@ export type Experience = {
 	position: string;
 	duration: string;
 	description: Description;
-	techStack?: string[];
+	techStack?: TechStackIcon[];
 	readMore?: boolean;
 	modalContent?: ReactNode;
 	website?: string;
@@ -39,7 +45,7 @@ export function ModalContentLayout({
 	position: string;
 	duration: string;
 	image: StaticImageData;
-	techStack?: string[];
+	techStack?: TechStackIcon[];
 	website?: string;
 }) {
 	return (
@@ -55,8 +61,9 @@ export function ModalContentLayout({
 							{techStack.map((tech, index) => (
 								<Image
 									key={index}
-									src={tech}
-									alt={tech}
+									src={tech.url}
+									alt={tech.title}
+									title={tech.title}
 									width={20}
 									height={20}
 									quality={80}
@@ -136,7 +143,7 @@ const PropEco: Experience = {
 			"Developed embeddable widgets for client websites to display live company API data, enhancing customer engagement and platform integration.",
 		],
 	},
-	techStack: [ReactIcon, TypescriptIcon, PythonIcon],
+	techStack: [ReactIcon, TypeScriptIcon, PythonIcon],
 	readMore: true,
 	website: "https://www.propeco.io",
 };
@@ -154,7 +161,7 @@ const Poland20: Experience = {
 			"Optimised performance by implementing lazy loading and next-gen image formats (WebP), reducing image load times by ~45% and improving Lighthouse score by 5+ points.",
 		],
 	},
-	techStack: [NextJsIcon, ReactIcon, TypescriptIcon],
+	techStack: [NextJSIcon, ReactIcon, TypeScriptIcon],
 	readMore: true,
 	website: "https://www.poland20.com",
 };

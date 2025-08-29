@@ -7,22 +7,22 @@ import { type CSSProperties, type FC } from "react";
 
 import {
 	JavaIcon,
-	JavascriptIcon,
+	JavaScriptIcon,
 	MongoDBIcon,
-	NextJsIcon,
+	NextJSIcon,
 	PythonIcon,
 	ReactIcon,
-	TypescriptIcon,
+	TypeScriptIcon,
 } from "../../TechStackIcons";
 
 const slides = [
-	{ icon: MongoDBIcon, tooltip: "1 year of experience" },
-	{ icon: NextJsIcon, tooltip: "1 year of experience" },
-	{ icon: ReactIcon, tooltip: "2 years of experience" },
-	{ icon: TypescriptIcon, tooltip: "2 years of experience" },
-	{ icon: JavaIcon, tooltip: "1 year of experience" },
-	{ icon: PythonIcon, tooltip: "2 years of experience" },
-	{ icon: JavascriptIcon, tooltip: "2 years of experience" },
+	{ icon: MongoDBIcon, tooltip: "MongoDB - 1 year of experience" },
+	{ icon: NextJSIcon, tooltip: "NextJS - 2 years of experience" },
+	{ icon: ReactIcon, tooltip: "React - 2 years of experience" },
+	{ icon: TypeScriptIcon, tooltip: "Typescript - 2 years of experience" },
+	{ icon: JavaIcon, tooltip: "Java - 1 year of experience" },
+	{ icon: PythonIcon, tooltip: "Python - 2 years of experience" },
+	{ icon: JavaScriptIcon, tooltip: "Javascript - 2 years of experience" },
 ];
 
 type PropType = {
@@ -56,7 +56,7 @@ const TechStackCarousel: FC<PropType> = (props) => {
 					{slides.map((value) => (
 						<div
 							className="ml-[var(--slide-spacing)] min-w-0"
-							key={value.icon}
+							key={value.icon.url}
 							style={{
 								transform: "translate3d(0, 0, 0)",
 								flex: "0 0 var(--slide-size)",
@@ -65,7 +65,7 @@ const TechStackCarousel: FC<PropType> = (props) => {
 							<div className="rounded-[1.8rem] flex items-center justify-center select-none h-[var(--slide-height)] group relative">
 								<Image
 									title={value.tooltip}
-									src={value.icon}
+									src={value.icon.url}
 									width={size}
 									height={size}
 									alt="Programming Language Icon"
