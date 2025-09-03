@@ -12,7 +12,7 @@ export interface Testimonial {
 
 const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Testimonial }) {
 	return (
-		<article className="flex flex-row min-w-[90dvw] sm:min-w-[80dvw] min-h-[20dvh] max-h-[20dvh] sm:min-h-[32dvh] sm:max-h-[38dvh] bg-[var(--muted-background)] rounded-sm">
+		<article className="flex flex-row min-w-[90dvw] sm:min-w-[80dvw] min-h-[20dvh] sm:min-h-[32dvh] bg-[var(--muted-background)] rounded-sm p-2">
 			<div className="flex justify-center items-center p-2 sm:p-4 flex-shrink-0">
 				<Image
 					src={props.testimonial.image}
