@@ -65,7 +65,7 @@ export default function Hero() {
 						href={"/Jakub_Szamotulski_Resume.pdf"}
 						target="_blank"
 						title="Read my resume!"
-						className="transition-all duration-200 hover:scale-105 bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded flex justify-center w-full h-auto sm:w-auto"
+						className="transition-[color,transform] duration-200 hover:scale-105 bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded flex justify-center w-full h-auto sm:w-auto text-sm sm:text-base"
 						rel="noreferrer"
 					>
 						My Resume

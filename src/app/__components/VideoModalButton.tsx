@@ -13,7 +13,7 @@ export function VideoModalButton({ text, videoId }: VideoModalButtonProps) {
 	return (
 		<>
 			<button
-				className="transition-all duration-200 hover:scale-105 bg-[var(--primary-magenta)] hover:bg-[var(--hover-magenta)] text-white font-bold py-2 px-4 rounded cursor-pointer w-full h-auto sm:w-auto"
+				className="transition-[color,transform] duration-200 hover:scale-105 bg-[var(--primary-magenta)] hover:bg-[var(--hover-magenta)] text-white font-bold py-2 px-4 rounded cursor-pointer w-full h-auto sm:w-auto text-sm sm:text-base"
 				type="button"
 				onClick={() => setIsOpen(true)}
 			>
