@@ -25,8 +25,10 @@ export function SplashScreen({ visible = true }: { visible?: boolean }) {
 						}}
 						className="flex flex-col items-center pb-20 tracking-wide font-light"
 					>
-						<p className="text-6xl md:text-7xl text-center">Welcome to My Portfolio</p>
-						<p className="text-[var(--hover-magenta)] text-xl md:text-2xl mt-2 drop-shadow-[0_2px_8px_black]">
+						<p className="text-3xl sm:text-6xl md:text-7xl text-center">
+							Welcome to My Portfolio
+						</p>
+						<p className="text-[var(--hover-magenta)] text-lg sm:text-xl md:text-2xl mt-2 drop-shadow-[0_2px_8px_black]">
 							Discover. Explore. Connect.
 						</p>
 					</motion.div>
