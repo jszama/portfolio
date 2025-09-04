@@ -16,12 +16,13 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 			<div className="flex justify-center items-center p-2 sm:p-4 flex-shrink-0">
 				<Image
 					src={props.testimonial.image}
+					title={`${props.testimonial.name}'s LinkedIn Profile`}
 					width={192}
 					height={192}
 					alt={`${props.testimonial.name}'s LinkedIn Profile Image`}
 					quality={90}
-					className="transition-transform duration-200 hover:scale-105 will-change-transform cursor-pointer w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-full object-cover"
-					// placeholder='blur'
+					className="transition-[scale] duration-200 hover:scale-105 will-change-transform cursor-pointer w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-full object-cover"
+					placeholder="blur"
 					loading="eager"
 					onClick={() => window.open(props.testimonial.link, "_blank")}
 				/>
@@ -36,8 +37,9 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 							href={props.testimonial.link}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="cursor-pointer transition-transform duration-200 flex items-center hover:text-[#0083c9] pt-1"
+							className="cursor-pointer transition-[color] duration-200 flex items-center hover:text-[#0083c9] pt-1"
 							aria-label={`Go to ${props.testimonial.name}'s profile`}
+							title={`Go to ${props.testimonial.name}'s profile`}
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"

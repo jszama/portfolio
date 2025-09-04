@@ -29,7 +29,7 @@ const ExperienceCard = memo(function ExperienceCard({
 				className="flex flex-col snap-start items-center gap-y-1 sm:gap-y-2"
 			>
 				<div
-					className={`bg-[var(--muted-background)] rounded-lg hover:scale-[1.01] hover:drop-shadow-[0_0_4px_var(--hover-magenta)] flex items-start font-bold  mb-2 sm:max-h-80 max-h-64 h-80 relative overflow-hidden transition-all duration-500 ease-out will-change-transform ${isExpanded ? "w-[90vw] sm:w-[36rem]" : "w-[11rem] sm:w-[14rem]"}`}
+					className={`bg-[var(--muted-background)] rounded-lg hover:scale-[1.01] hover:drop-shadow-[0_0_4px_var(--hover-magenta)] flex items-start font-bold  mb-2 sm:max-h-80 max-h-64 h-80 relative overflow-hidden transition-[scale,shadow] duration-500 ease-out will-change-transform ${isExpanded ? "w-[90vw] sm:w-[36rem]" : "w-[11rem] sm:w-[14rem]"}`}
 					style={{
 						transform: "translateZ(0)",
 					}}
@@ -93,7 +93,7 @@ const ExperienceCard = memo(function ExperienceCard({
 							</div>
 							{readMore && (
 								<Button
-									className="absolute cursor-pointer bottom-2 right-2 text-[var(--primary-text)] font-bold hover:text-[var(--hover-magenta)] transition-all duration-300 ease-in-out"
+									className="absolute cursor-pointer bottom-2 right-2 text-[var(--primary-text)] font-bold hover:text-[var(--hover-magenta)] transition-[color] duration-300 ease-in-out"
 									onClick={() => toggleModal()}
 								>
 									Read more

@@ -70,7 +70,7 @@ function SocialMediaLink({ href, icon }: { href: string; icon: ReactNode }) {
 			href={href}
 			target="_blank"
 			rel="noopener noreferrer"
-			className="text-[var(--accent-text)] hover:text-[var(--primary-magenta)] transition duration-300 hover:scale-110"
+			className="text-[var(--accent-text)] hover:text-[var(--primary-magenta)] transition-[scale,color] duration-300 hover:scale-110"
 		>
 			{icon}
 		</a>

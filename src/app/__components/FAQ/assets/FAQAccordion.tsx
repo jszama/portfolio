@@ -31,14 +31,14 @@ function AccordionItem({ faq, index }: { faq: FAQItem; index: number }) {
 
 	return (
 		<div
-			className="bg-[var(--muted-background)] rounded-lg border border-[var(--divider-color)] overflow-hidden hover:border-[var(--primary-magenta)] transition-colors duration-200"
+			className="bg-[var(--muted-background)] rounded-lg border border-[var(--divider-color)] overflow-hidden hover:border-[var(--primary-magenta)] transition-[border-color] duration-200"
 			key={index}
 		>
 			<button
-				className="w-full flex justify-between items-center p-4 text-left text-[var(--primary-text)] hover:bg-[var(--secondary-dark-background)] transition-colors duration-200 cursor-pointer"
+				className="w-full flex justify-between items-center p-4 text-left text-[var(--primary-text)] hover:bg-[var(--secondary-dark-background)] transition-[background-color] duration-200 cursor-pointer"
 				onClick={() => setIsOpen(!isOpen)}
 			>
-				<span className="text-md font-medium hover:text-[var(--primary-magenta)] transition-colors duration-200">
+				<span className="text-md font-medium hover:text-[var(--primary-magenta)] transition-[color] duration-200">
 					{faq.question}
 				</span>
 				<motion.svg

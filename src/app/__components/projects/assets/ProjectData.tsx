@@ -32,7 +32,7 @@ interface ProjectLinkButtonProps {
 
 export function ProjectLinkButton({ href, variant, children }: ProjectLinkButtonProps) {
 	const baseClasses =
-		"transition-all duration-200 hover:scale-105 text-white font-bold py-1 px-2 rounded flex items-center gap-2 text-sm";
+		"transition-[scale,background-color] duration-200 hover:scale-105 text-white font-bold py-1 px-2 rounded flex items-center gap-2 text-sm";
 	const variantClasses =
 		variant === "purple"
 			? "bg-[var(--primary-magenta)] hover:bg-[var(--hover-magenta)]"

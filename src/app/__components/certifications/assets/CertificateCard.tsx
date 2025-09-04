@@ -27,10 +27,10 @@ export default function CertificateCard({ image, title, description, link }: Cer
 						width={300}
 						height={200}
 						placeholder="blur"
-						className="w-full h-auto max-h-[300px] transition-all duration-300 transform translate-y-[-8px] hover:translate-y-[-12px] relative z-10"
+						className="w-full h-auto max-h-[300px] transition-[translate] duration-300 transform translate-y-[-8px] hover:translate-y-[-12px] relative z-10"
 					/>
 					{/* Circular shadow underneath */}
-					<div className="absolute top-[95%] left-1/2 transform -translate-x-1/2 w-full h-5 bg-black/80 rounded-full blur-sm transition-all duration-300" />
+					<div className="absolute top-[95%] left-1/2 transform -translate-x-1/2 w-full h-4 sm:h-5 bg-black/80 rounded-full blur-sm" />
 				</div>
 				<h3 className="text-xs sm:text-base text-center text-[var(--primary-text)]">
 					{title}
