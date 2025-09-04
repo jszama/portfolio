@@ -9,7 +9,7 @@ import Testimonials from "./__components/testimonials";
 
 import { useEffect, useState } from "react";
 import Certifications from "./__components/certifications";
-// import FAQ from "./__components/FAQ";
+import FAQ from "./__components/FAQ";
 import { SlideInAnimation } from "./__components/SlideInAnimation";
 import { SplashScreen } from "./__components/SplashScreen";
 
@@ -45,9 +45,9 @@ export default function Home() {
 						<SlideInAnimation duration={0.5} from="right">
 							<Certifications />
 						</SlideInAnimation>
-						{/* <SlideInAnimation duration={0.5} from="left">
+						<SlideInAnimation duration={0.5} from="left">
 							<FAQ />
-						</SlideInAnimation> */}
+						</SlideInAnimation>
 					</main>
 					<Footer />
 					<Contacts />
