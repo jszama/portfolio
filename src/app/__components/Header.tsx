@@ -14,6 +14,7 @@ export default function Header() {
 	return (
 		<header className="text-[var(--primary-text)] w-screen fixed top-0 z-50 border-b-2 border-[var(--hover-magenta)] bg-[var(--secondary-dark-background)] opacity-95">
 			<div className="flex justify-between items-center px-3 sm:px-4 md:px-6 py-4">
+				<span className="sr-only">Jakub Maciej Szamotulski - Software Engineer</span>
 				<h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[var(--hover-magenta)]">
 					<a href="#about-me" aria-label="Go to Home">
 						<TypeAnimation
