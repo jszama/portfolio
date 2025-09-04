@@ -30,6 +30,7 @@ export function VideoModalButton({ text, videoId }: VideoModalButtonProps) {
 					title="YouTube video about me"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
 					allowFullScreen={true}
+					loading="eager"
 				/>
 			</Modal>
 		</>

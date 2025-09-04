@@ -60,7 +60,7 @@ export default function Hero() {
 					Developer.
 				</p>
 				<div className="flex flex-row space-x-4 h-full items-baseline">
-					<VideoModalButton text="Watch Now" videoId="JwYzHW_q3c4" />
+					<VideoModalButton text="Watch Now" videoId="RcUtfUNBSrU" />
 					<a
 						href={"/Jakub_Szamotulski_Resume.pdf"}
 						target="_blank"
