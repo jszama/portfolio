@@ -7,7 +7,7 @@ const NavigationItems = [
 	{ name: "Experience", href: "#experience" },
 	{ name: "Testimonials", href: "#testimonials" },
 	{ name: "Certifications", href: "#certifications" },
-	// { name: "FAQ", href: "#faq" },
+	{ name: "FAQ", href: "#faq" },
 ];
 
 export default function Header() {
