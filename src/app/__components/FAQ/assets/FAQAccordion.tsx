@@ -10,7 +10,7 @@ interface FAQItem {
 const faqData: FAQItem[] = [
 	{
 		question: "Do you have any hobbies outside of coding?",
-		answer: "Yeah a lot actually. I try really hard to stay away from the screens whenever possible so some include reading books, playing basketball, exercising, and spending time with my family and friends.",
+		answer: "Most definitely. I try really hard to stay away from the screens whenever possible, some of my favourites include reading books, playing basketball, exercising, and spending time with my family and friends.",
 	},
 	{
 		question: "What is your go-to song or playlist?",
