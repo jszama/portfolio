@@ -59,6 +59,7 @@ function DropDownMenu() {
 			<button
 				className="sm:hidden dropdown-button text-[var(--primary-text)] hover:text-[var(--hover-magenta)] transition-all duration-200"
 				onClick={toggleDropDown}
+				aria-label="Toggle navigation menu"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
