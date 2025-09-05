@@ -55,9 +55,9 @@ export default function Hero() {
 					using React - and I don&apos;t just follow tutorials. I build real solutions to
 					real problems.
 				</p>
-				<p className="text-[var(--primary-text)] leading-relaxed mb-4 mt-2 sm:mt-0 sm:mb-6 w-full md:w-[40%] sm:hidden">
-					Watch this short documentary about my life and how I became a Fullstack
-					Developer.
+				<p className="text-[var(--primary-text)] leading-relaxed mb-4 mt-2 sm:mt-0 sm:mb-6 w-full md:w-[40%] sm:hidden text-justify">
+					Fullstack Developer and third-year SWE student @ University of Strathclyde,
+					building fast, scalable apps with React.
 				</p>
 				<div className="flex flex-row space-x-4 h-full items-baseline">
 					<VideoModalButton text="Watch Now" videoId="RcUtfUNBSrU" />
