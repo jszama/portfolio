@@ -9,12 +9,12 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
 	{
-		question: "Do you have any hobbies outside of coding?",
-		answer: "Most definitely. I try really hard to stay away from the screens whenever possible, some of my favourites include reading books, playing basketball, exercising, and spending time with my family and friends.",
+		question: "Why did you choose Software Engineering?",
+		answer: "I have been around computers and technology my whole life, watching my older brothers play games and eventually being allowed to join in. As I got older, I spent a lot of my time in front of a screen, and I wanted to do something productive with that time. During CS classes in high school, programming really clicked with me and just made sense. I loved the problem-solving aspect and the creativity involved in building something from scratch. It felt like a perfect blend of logic and imagination, which is why I decided to pursue Software Engineering.",
 	},
 	{
-		question: "What is your go-to song or playlist?",
-		answer: "My go-to is usually something by Brent Faiyaz, leaning towards 'Clouded' or 'Mercedes'. I've always been a big fan of RnB, Afrobeats, and Rap, and those genres have been a part of my life for as long as I can remember.",
+		question: "Do you have any hobbies outside of coding?",
+		answer: "Most definitely. I try really hard to stay away from the screens whenever possible, some of my favourite activities include reading, playing basketball, working out, and spending time with my family and friends. I try not to let coding take over my life, as much as I love it, I think it's important to have a balance and enjoy other aspects of life too.",
 	},
 	{
 		question: "How do you wind down after a long day?",
