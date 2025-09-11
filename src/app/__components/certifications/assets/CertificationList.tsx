@@ -3,6 +3,7 @@ import CertificateCard from "./CertificateCard";
 import DeansListCertificate from "./deans_list.webp";
 import JPMorganCertificate from "./jpmorgan.webp";
 import PostmanCertificate from "./postman.webp";
+import ScrumCertificate from "./scrum.webp";
 import WalmartCertificate from "./walmart.webp";
 
 interface Certificate {
@@ -13,6 +14,13 @@ interface Certificate {
 }
 
 const Certificates: Certificate[] = [
+	{
+		image: ScrumCertificate,
+		title: "Scrum for Developers",
+		description:
+			"Comprehensive understanding of Scrum principles and practices, including roles, events, and artifacts, to effectively contribute to Agile teams.",
+		link: "https://www.linkedin.com/learning/certificates/dccbf79226614882ff005f4e88af955eb599744b4355497f51b6e2b0190bc654?trk=share_certificate",
+	},
 	{
 		image: PostmanCertificate,
 		title: "Postman API Fundamentals",
