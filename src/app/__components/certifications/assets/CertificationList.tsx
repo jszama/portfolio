@@ -1,5 +1,6 @@
 import type { StaticImageData } from "next/image";
 import CertificateCard from "./CertificateCard";
+import CleanCodeCertificate from "./clean_code.webp";
 import DeansListCertificate from "./deans_list.webp";
 import JPMorganCertificate from "./jpmorgan.webp";
 import PostmanCertificate from "./postman.webp";
@@ -14,6 +15,13 @@ interface Certificate {
 }
 
 const Certificates: Certificate[] = [
+	{
+		image: CleanCodeCertificate,
+		title: "Clean Code Practices",
+		description:
+			"Understanding of clean code principles, including meaningful naming, functions, comments, formatting, and error handling to write maintainable and readable code.",
+		link: "https://www.linkedin.com/learning/certificates/c3243f111304b9813bb34644727ab1c1d111120bc7d06d7c4a5e52ad0d792e0f?trk=share_certificate",
+	},
 	{
 		image: ScrumCertificate,
 		title: "Scrum for Developers",
