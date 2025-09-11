@@ -18,7 +18,7 @@ export default function CertificateCard({ image, title, description, link }: Cer
 				className="block"
 				data-tooltip-id="certificate-tooltip"
 				data-tooltip-content={description}
-				data-tooltip-place="bottom"
+				data-tooltip-place="top"
 			>
 				<div className="relative mb-4">
 					<Image
