@@ -10,7 +10,7 @@ export interface CertificateCardProps {
 
 export default function CertificateCard({ image, title, description, link }: CertificateCardProps) {
 	return (
-		<article>
+		<article className="flex flex-shrink-0">
 			<a
 				href={link}
 				target="_blank"

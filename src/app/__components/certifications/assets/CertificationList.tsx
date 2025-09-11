@@ -1,4 +1,5 @@
 import type { StaticImageData } from "next/image";
+import { forwardRef } from "react";
 import CertificateCard from "./CertificateCard";
 import CleanCodeCertificate from "./clean_code.webp";
 import DeansListCertificate from "./deans_list.webp";
@@ -59,18 +60,24 @@ const Certificates: Certificate[] = [
 	},
 ];
 
-export function CertificationList() {
-	return (
-		<section className="flex flex-row overflow-x-auto gap-4 py-4 px-2 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-[var(--hover-magenta)] scrollbar-track-[var(--muted-background)]">
-			{Certificates.map((cert, index) => (
-				<CertificateCard
-					key={index}
-					image={cert.image}
-					title={cert.title}
-					description={cert.description}
-					link={cert.link}
-				/>
-			))}
-		</section>
-	);
-}
+export const CertificationList = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+	function CertificationList(props, ref) {
+		return (
+			<div
+				className="flex flex-row flex-nowrap overflow-x-auto gap-4 py-4 px-2 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-[var(--hover-magenta)] scrollbar-track-[var(--muted-background)]"
+				ref={ref}
+				{...props}
+			>
+				{Certificates.map((cert) => (
+					<CertificateCard
+						key={cert.title}
+						image={cert.image}
+						title={cert.title}
+						description={cert.description}
+						link={cert.link}
+					/>
+				))}
+			</div>
+		);
+	}
+);
