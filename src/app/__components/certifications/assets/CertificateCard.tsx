@@ -10,7 +10,7 @@ export interface CertificateCardProps {
 
 export default function CertificateCard({ image, title, description, link }: CertificateCardProps) {
 	return (
-		<article className="flex flex-shrink-0">
+		<article className="flex flex-shrink-0 h-fit">
 			<a
 				href={link}
 				target="_blank"
@@ -18,7 +18,7 @@ export default function CertificateCard({ image, title, description, link }: Cer
 				className="block"
 				data-tooltip-id="certificate-tooltip"
 				data-tooltip-content={description}
-				data-tooltip-place="top"
+				data-tooltip-place="bottom"
 			>
 				<div className="relative mb-4">
 					<Image
