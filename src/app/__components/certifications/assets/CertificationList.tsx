@@ -2,6 +2,7 @@ import type { StaticImageData } from "next/image";
 import { forwardRef } from "react";
 import CertificateCard from "./CertificateCard";
 import CleanCodeCertificate from "./clean_code.webp";
+import CodeQualityCertificate from "./code_quality.webp";
 import DeansListCertificate from "./deans_list.webp";
 import JPMorganCertificate from "./jpmorgan.webp";
 import PostmanCertificate from "./postman.webp";
@@ -16,6 +17,13 @@ interface Certificate {
 }
 
 const Certificates: Certificate[] = [
+	{
+		image: CodeQualityCertificate,
+		title: "Code Quality Practices",
+		description:
+			"Understanding of code quality principles, including test coverage, hotspots, duplication, dependency vulnerabilities, and code style to ensure high-quality software development.",
+		link: "https://www.linkedin.com/learning/certificates/a7a5d1e9add8a57cba15a99729ff25019f67b6368e56253fbe110ce652f13c9a?trk=share_certificate",
+	},
 	{
 		image: CleanCodeCertificate,
 		title: "Clean Code Practices",
