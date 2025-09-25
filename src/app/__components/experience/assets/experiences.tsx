@@ -143,7 +143,6 @@ const Loopsio: Experience = {
 		],
 	},
 	techStack: [],
-	readMore: true,
 	website: "https://www.loopsio.com",
 };
 
@@ -358,9 +357,9 @@ const ModalContent = {
 };
 
 export const Experiences: ExperiencesType = {
+	Loopsio,
 	PropEco: { ...PropEco, modalContent: ModalContent.PropEco },
 	Poland20: { ...Poland20, modalContent: ModalContent.Poland20 },
-	Loopsio,
 	Outlier,
 	Subsea7,
 };
