@@ -8,7 +8,7 @@ import {
 	TypeScriptIcon,
 	type TechStackIcon,
 } from "../../TechStackIcons";
-import { OutlierLogo, Poland20Logo, PropecoLogo, Subsea7Logo } from "./index";
+import { LoopsioLogo, OutlierLogo, Poland20Logo, PropecoLogo, Subsea7Logo } from "./index";
 
 export type Description = {
 	title: string;
@@ -128,6 +128,23 @@ ModalContentLayout.ListItem = function ListItem({ children }: { children: ReactN
 
 ModalContentLayout.ImageSection = function ImageSection({ children }: { children: ReactNode }) {
 	return <section className="flex flex-col sm:flex-row px-8 py-4 gap-4">{children}</section>;
+};
+
+const Loopsio: Experience = {
+	company: "Loopsio",
+	company_icon: LoopsioLogo,
+	position: "Lead Web Developer",
+	duration: "Sep 2025 - Present",
+	description: {
+		title: "Leading the development of Loopsio's web platform, focusing on performance and user experience.",
+		description: [
+			"Leading the redesign and implementation of the company's new main website using Webflow.",
+			"Collaborating with the communications team to enhance SEO and content strategy.",
+		],
+	},
+	techStack: [],
+	readMore: true,
+	website: "https://www.loopsio.com",
 };
 
 const PropEco: Experience = {
@@ -343,8 +360,9 @@ const ModalContent = {
 export const Experiences: ExperiencesType = {
 	PropEco: { ...PropEco, modalContent: ModalContent.PropEco },
 	Poland20: { ...Poland20, modalContent: ModalContent.Poland20 },
+	Loopsio,
 	Outlier,
 	Subsea7,
 };
 
-export { Outlier, Poland20, PropEco, Subsea7 };
+export { Loopsio, Outlier, Poland20, PropEco, Subsea7 };
