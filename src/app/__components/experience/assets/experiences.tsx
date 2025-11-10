@@ -5,6 +5,8 @@ import {
 	NextJSIcon,
 	PythonIcon,
 	ReactIcon,
+	StripeIcon,
+	SupabaseIcon,
 	TypeScriptIcon,
 	type TechStackIcon,
 } from "../../TechStackIcons";
@@ -133,16 +135,17 @@ ModalContentLayout.ImageSection = function ImageSection({ children }: { children
 const Loopsio: Experience = {
 	company: "Loopsio",
 	company_icon: LoopsioLogo,
-	position: "Lead Web Developer",
+	position: "Web & Product Lead",
 	duration: "Sep 2025 - Present",
 	description: {
-		title: "Leading the development of Loopsio's web platform, focusing on performance and user experience.",
+		title: "Leading the development of Loopsio's web platform, while also working on new products.",
 		description: [
 			"Leading the redesign and implementation of the company's new main website using Webflow.",
 			"Collaborating with the communications team to enhance SEO and content strategy.",
+			"Developing new internal tools and customer-facing features using Next.js and TypeScript.",
 		],
 	},
-	techStack: [],
+	techStack: [NextJSIcon, ReactIcon, TypeScriptIcon, SupabaseIcon, StripeIcon],
 	website: "https://www.loopsio.com",
 };
 
@@ -150,7 +153,7 @@ const PropEco: Experience = {
 	company: "PropEco",
 	company_icon: PropecoLogo,
 	position: "Fullstack Engineer",
-	duration: "Apr 2025 - August 2025",
+	duration: "Apr 2025 - Aug 2025",
 	description: {
 		title: "My first professional Software Engineering position, at a start-up.",
 		description: [
@@ -159,7 +162,7 @@ const PropEco: Experience = {
 			"Developed embeddable widgets for client websites to display live company API data, enhancing customer engagement and platform integration.",
 		],
 	},
-	techStack: [ReactIcon, TypeScriptIcon, PythonIcon],
+	techStack: [ReactIcon, TypeScriptIcon, PythonIcon, StripeIcon],
 	readMore: true,
 	website: "https://www.propeco.io",
 };
@@ -168,7 +171,7 @@ const Poland20: Experience = {
 	company: "Poland 2.0",
 	company_icon: Poland20Logo,
 	position: "Frontend Engineer",
-	duration: "Jan 2025 - Present",
+	duration: "Jan 2025 - Oct 2025",
 	description: {
 		title: "My first Software Engineering role, I am in charge of maintaining and improving the company website.",
 		description: [
