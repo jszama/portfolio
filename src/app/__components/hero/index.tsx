@@ -49,13 +49,13 @@ export default function Hero() {
 						<TechStackCarousel options={OPTIONS} size={48} />
 					</span>
 				</div>
-				<p className="text-[var(--primary-text)] leading-relaxed mb-6 w-full md:w-[40%] hidden sm:block text-justify">
+				<p className="text-[var(--primary-text)] leading-relaxed mb-6 w-full md:w-[40%] hidden sm:block">
 					I&apos;m a Fullstack Developer and third-year Software Engineering student at
 					the University of Strathclyde. I build fast, scalable applications primarily
 					using React - and I don&apos;t just follow tutorials. I build real solutions to
 					real problems.
 				</p>
-				<p className="text-[var(--primary-text)] leading-relaxed mb-4 mt-2 sm:mt-0 sm:mb-6 w-full md:w-[40%] sm:hidden text-justify">
+				<p className="text-[var(--primary-text)] leading-relaxed mb-4 mt-2 sm:mt-0 sm:mb-6 w-full md:w-[40%] sm:hidden">
 					Fullstack Developer and third-year SWE student @ University of Strathclyde,
 					building fast, scalable apps with React.
 				</p>
