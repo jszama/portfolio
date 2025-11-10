@@ -58,6 +58,11 @@ const SupabaseIcon: TechStackIcon = {
 	url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
 };
 
+const StripeIcon: TechStackIcon = {
+	title: "Stripe",
+	url: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'><rect width='100%' height='100%' rx='24' fill='%236B46C1'/><text x='50%' y='54%' font-family='Arial,Helvetica,sans-serif' font-size='72' fill='white' font-weight='700' text-anchor='middle' dominant-baseline='middle'>S</text></svg>",
+};
+
 export {
 	ElectronIcon,
 	JavaIcon,
@@ -68,6 +73,7 @@ export {
 	PythonIcon,
 	ReactIcon,
 	SpringBootIcon,
+	StripeIcon,
 	SupabaseIcon,
 	TypeScriptIcon,
 };
