@@ -7,6 +7,7 @@ import type { Configuration } from "webpack";
 const nextConfig: NextConfig = {
 	reactStrictMode: true,
 	compress: true,
+	reactCompiler: true,
 	experimental: {
 		optimizeCss: true,
 	},
