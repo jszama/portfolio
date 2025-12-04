@@ -1,4 +1,6 @@
 import { FlatCompat } from "@eslint/eslintrc";
+import nextWebCoreVitals from "eslint-config-next/core-web-vitals";
+import eslintTypescript from "eslint-config-next/typescript";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -10,7 +12,11 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-	...compat.extends("next/core-web-vitals", "next/typescript"),
+	{
+		ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts"],
+	},
+	...eslintTypescript,
+	...nextWebCoreVitals,
 	{
 		rules: {
 			// Enforce tabs instead of spaces
