@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import { useScrollOverflow } from "../hooks";
 import { ScrollArrows } from "../ScrollArrows";
+import { UnderGlow } from "../UnderGlow";
 import { CertificationList } from "./assets/CertificationList";
 
 export default function Certifications() {
@@ -24,7 +25,7 @@ export default function Certifications() {
 
 			<CertificationList ref={sliderRef} />
 			{overflowing && showArrows && <ScrollArrows sliderRef={sliderRef} />}
-			<div className="w-full h-full rounded-full bg-radial from-[var(--hover-magenta)] to-transparent blur-3xl opacity-50 absolute z-0" />
+			<UnderGlow />
 		</section>
 	);
 }
