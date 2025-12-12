@@ -1,7 +1,7 @@
-import { type Testimonial } from "./TestimonialCard";
 import Chris_Hardman from "./chris_hardman.webp";
 import Dagmara_Kowalska from "./dagmara_kowalska.webp";
 import Michael_Ajayi from "./michael_ajayi.webp";
+import { type Testimonial } from "./TestimonialCard";
 
 export const testimonials: Testimonial[] = [
 	{
@@ -12,6 +12,7 @@ export const testimonials: Testimonial[] = [
 			"Jakub demonstrated professionalism, organizational skills, and dedication, making a significant contribution to the success of the 2025 Poland 2.0 summit. We recommend Jakub Szamotulski to any organization seeking a capable, motivated, and trustworthy individual.",
 		image: Dagmara_Kowalska,
 		link: "https://www.linkedin.com/in/dagmara-kowalska-gumna/",
+		downloadable: "./bcg_testimonial.pdf",
 	},
 	{
 		name: "Chris Hardman",
