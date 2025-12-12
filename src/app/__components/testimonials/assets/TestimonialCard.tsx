@@ -8,6 +8,7 @@ export interface Testimonial {
 	testimonial: string;
 	image: string | StaticImageData;
 	link: string;
+	downloadable?: string;
 }
 
 const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Testimonial }) {
@@ -50,6 +51,31 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 								<path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.29h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.85-1.54 3.05 0 3.61 2.01 3.61 4.62v4.69z" />
 							</svg>
 						</a>
+						{props.testimonial.downloadable && (
+							<a
+								href={props.testimonial.downloadable}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="cursor-pointer transition-[color] duration-200 flex items-center hover:text-[#0083c9] pt-1"
+								aria-label={`Download ${props.testimonial.name}'s testimonial`}
+								title={`Download ${props.testimonial.name}'s testimonial`}
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									strokeWidth="2"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								>
+									<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+									<polyline points="7 10 12 15 17 10" />
+									<line x1="12" y1="15" x2="12" y2="3" />
+								</svg>
+							</a>
+						)}
 					</div>
 					<p className="text-sm md:text-base text-[var(--secondary-text)] mb-1">
 						{props.testimonial.role} @ {props.testimonial.company}
