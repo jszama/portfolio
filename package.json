@@ -6,7 +6,7 @@
 		"dev": "next dev --turbopack",
 		"build": "next build --turbopack",
 		"start": "next start",
-		"lint": "next lint",
+		"lint": "pnpm exec eslint .",
 		"lint:fix": "pnpm lint --fix",
 		"lint:changed": "eslint --cache",
 		"format": "prettier --write .",
