@@ -55,7 +55,7 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 						{props.testimonial.role} @ {props.testimonial.company}
 					</p>
 				</div>
-				<p className="text-sm md:text-lg text-[var(--primary-text)] mb-1 w-[95%] text-justify overflow-ellipsis">
+				<p className="text-sm md:text-lg text-[var(--primary-text)] mb-1 w-[95%] text-center overflow-ellipsis sm:text-justify">
 					<em>&quot;{props.testimonial.testimonial}&quot;</em>
 				</p>
 			</div>
