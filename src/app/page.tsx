@@ -26,7 +26,7 @@ export default function Home() {
 
 	return (
 		<>
-			<Snowfall snowflakeCount={200} style={{ zIndex: 101 }} />
+			<Snowfall snowflakeCount={200} radius={[0.5, 2.5]} style={{ zIndex: 101 }} />
 			<SplashScreen visible={showSplash} />
 			{!showSplash && (
 				<>
