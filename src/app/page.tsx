@@ -8,6 +8,7 @@ import Projects from "./__components/projects";
 import Testimonials from "./__components/testimonials";
 
 import { useEffect, useState } from "react";
+import Snowfall from "react-snowfall";
 import Certifications from "./__components/certifications";
 import FAQ from "./__components/FAQ";
 import { SlideInAnimation } from "./__components/SlideInAnimation";
@@ -25,6 +26,7 @@ export default function Home() {
 
 	return (
 		<>
+			<Snowfall snowflakeCount={200} style={{ zIndex: 101 }} />
 			<SplashScreen visible={showSplash} />
 			{!showSplash && (
 				<>
