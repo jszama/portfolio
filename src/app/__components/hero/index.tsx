@@ -4,7 +4,6 @@ import { TechStackCarousel } from "./assets/TechStackCarousel";
 
 const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
 
-// TODO: Record Video
 export default function Hero() {
 	return (
 		<section
