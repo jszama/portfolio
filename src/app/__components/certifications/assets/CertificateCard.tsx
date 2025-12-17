@@ -37,10 +37,10 @@ export default function CertificateCard({ image, title, description, link }: Cer
 				</h3>
 				<Tooltip
 					id="certificate-tooltip"
-					className="!bg-[var(--muted-background)] max-w-[18rem] !text-white p-3 rounded-lg !shadow-xl border border-[var(--hover-magenta)] !opacity-100 z-50"
+					className="!bg-[var(--muted-background)] max-w-[18rem] !text-white p-3 rounded-lg !shadow-xl border border-[var(--hover-magenta)] z-50"
+					opacity={100}
 					style={{
 						backgroundColor: "var(--muted-background) !important",
-						opacity: "1 !important",
 					}}
 				/>
 			</a>
