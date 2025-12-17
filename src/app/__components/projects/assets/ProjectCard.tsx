@@ -29,7 +29,7 @@ const ProjectCard = memo(function ProjectCard(props: PropType) {
 						quality={85}
 						className="object-cover w-full h-full z-0 transition-[scale] duration-200 hover:scale-110 will-change-transform ease-out"
 						placeholder="blur"
-						loading="eager"
+						loading="lazy"
 						decoding="async"
 					/>
 				</div>

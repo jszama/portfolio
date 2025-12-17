@@ -2,6 +2,12 @@ import type { Metadata } from "next";
 import { type ReactNode } from "react";
 import "./globals.css";
 
+export const viewport = {
+	width: "device-width",
+	initialScale: 1,
+	themeColor: "#0f172a",
+} as const;
+
 export const metadata: Metadata = {
 	title: "Jakub Szamotulski | Fullstack Developer Portfolio",
 	description:
@@ -122,7 +128,14 @@ export default function RootLayout({
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
 				/>
 				<link rel="icon" href="/favicon.ico" />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link
+					rel="preload"
+					href="/hero_section_thumbnail.webp"
+					as="image"
+					type="image/webp"
+					imageSrcSet="/hero_section_thumbnail.webp"
+					imageSizes="(max-width: 640px) 100vw, (max-width: 1280px) 80vw, 1200px"
+				/>
 			</head>
 			<body className={`antialiased max-w-screen h-full overflow-y-scroll overflow-x-hidden`}>
 				{children}

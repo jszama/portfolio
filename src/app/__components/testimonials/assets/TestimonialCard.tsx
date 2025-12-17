@@ -24,7 +24,7 @@ const TestimonialCard = memo(function TestimonialCard(props: { testimonial: Test
 					quality={90}
 					className="transition-[scale] duration-200 hover:scale-105 will-change-transform cursor-pointer w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-full object-cover"
 					placeholder="blur"
-					loading="eager"
+					loading="lazy"
 					onClick={() => window.open(props.testimonial.link, "_blank")}
 				/>
 			</div>
