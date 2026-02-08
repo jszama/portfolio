@@ -10,7 +10,14 @@ import {
 	TypeScriptIcon,
 	type TechStackIcon,
 } from "../../TechStackIcons";
-import { LoopsioLogo, OutlierLogo, Poland20Logo, PropecoLogo, Subsea7Logo } from "./index";
+import {
+	JPMorganLogo,
+	LoopsioLogo,
+	OutlierLogo,
+	Poland20Logo,
+	PropecoLogo,
+	Subsea7Logo,
+} from "./index";
 
 export type Description = {
 	title: string;
@@ -132,13 +139,24 @@ ModalContentLayout.ImageSection = function ImageSection({ children }: { children
 	return <section className="flex flex-col sm:flex-row px-8 py-4 gap-4">{children}</section>;
 };
 
+const JPMorgan: Experience = {
+	company: "JPMorgan Chase & Co.",
+	company_icon: JPMorganLogo,
+	position: "SWE Industrial Placement",
+	duration: "Jun 2026 - Jun 2027",
+	description: {
+		title: "An upcoming 12-month industrial placement, working in the software engineering division.",
+		description: ["Details to be added during and after completion."],
+	},
+};
+
 const Loopsio: Experience = {
 	company: "Loopsio",
 	company_icon: LoopsioLogo,
 	position: "Web & Product Lead",
 	duration: "Sep 2025 - Present",
 	description: {
-		title: "Leading the development of Loopsio's web platform, while also working on new products.",
+		title: "Leading the development of Loopsio's web platform, as well as a new product.",
 		description: [
 			"Leading the redesign and implementation of the company's new main website using Webflow.",
 			"Collaborating with the communications team to enhance SEO and content strategy.",
@@ -171,7 +189,7 @@ const Poland20: Experience = {
 	company: "Poland 2.0",
 	company_icon: Poland20Logo,
 	position: "Frontend Engineer",
-	duration: "Jan 2025 - Oct 2025",
+	duration: "Jan 2025 - Present",
 	description: {
 		title: "My first Software Engineering role, I am in charge of maintaining and improving the company website.",
 		description: [
@@ -360,9 +378,10 @@ const ModalContent = {
 };
 
 export const Experiences: ExperiencesType = {
+	JPMorgan,
 	Loopsio,
-	PropEco: { ...PropEco, modalContent: ModalContent.PropEco },
 	Poland20: { ...Poland20, modalContent: ModalContent.Poland20 },
+	PropEco: { ...PropEco, modalContent: ModalContent.PropEco },
 	Outlier,
 	Subsea7,
 };
