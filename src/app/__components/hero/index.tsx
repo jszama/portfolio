@@ -1,5 +1,4 @@
 import type { EmblaOptionsType } from "embla-carousel";
-import { VideoModalButton } from "../VideoModalButton";
 import { TechStackCarousel } from "./assets/TechStackCarousel";
 
 const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
@@ -59,7 +58,7 @@ export default function Hero() {
 					building fast, scalable apps with React.
 				</p>
 				<div className="flex flex-row space-x-4 h-full items-baseline">
-					<VideoModalButton text="Watch Now" videoId="RcUtfUNBSrU" />
+					{/* <VideoModalButton text="Watch Now" videoId="RcUtfUNBSrU" /> */}
 					<a
 						href={"/Jakub_Szamotulski_Resume.pdf"}
 						target="_blank"
